@@ -36,27 +36,27 @@ export const ZeroNinePageTitleAndMiscMiddleware = () => {
   const location = useLocation();
 
   if (landingpage) {
-    document.title = "Friktion: Smarter returns on your crypto";
+    document.title = "Leverage.fun: Smarter returns on your crypto";
   } else if (homepage) {
-    document.title = "Friktion Volts";
+    document.title = "Leverage.fun Volts";
   } else if (portfolio) {
-    document.title = "Friktion Portfolio";
+    document.title = "Leverage.fun Portfolio";
   } else if (income) {
-    document.title = "Friktion Volt #01: Income";
+    document.title = "Leverage.fun Volt #01: Income";
   } else if (stables) {
-    document.title = "Friktion Volt #02: Stables";
+    document.title = "Leverage.fun Volt #02: Stables";
   } else if (crab) {
-    document.title = "Friktion Volt #03: Crab";
+    document.title = "Leverage.fun Volt #03: Crab";
   } else if (basis) {
-    document.title = "Friktion Volt #04: Basis Yield";
+    document.title = "Leverage.fun Volt #04: Basis Yield";
   } else if (protection) {
-    document.title = "Friktion Volt #05: Capital Protection";
+    document.title = "Leverage.fun Volt #05: Capital Protection";
   } else if (circuits) {
-    document.title = "Friktion Circuits";
+    document.title = "Leverage.fun Circuits";
   } else if (faucet) {
-    document.title = "Friktion Devnet Faucet";
+    document.title = "Leverage.fun Devnet Faucet";
   } else if (analytics) {
-    document.title = "Friktion Analytics";
+    document.title = "Leverage.fun Analytics";
   } else {
     if (
       window.location.hostname === "localhost" &&
