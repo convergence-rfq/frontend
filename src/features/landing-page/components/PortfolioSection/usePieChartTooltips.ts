@@ -122,13 +122,13 @@ export const usePieChartTooltips = (investmentStyle: InvestmentStyle) => {
                     top: top + "px",
                     transform: "translate(0, -100%)",
                   }
-                : pieSectorDataItem.payload.id === 3
-                ? {
-                    ...visibleStyles,
-                    left: left - translateX + "px",
-                    top: top + "px",
-                  }
-                : hiddenStyles),
+                : // : pieSectorDataItem.payload.id === 3
+                  // ? {
+                  //     ...visibleStyles,
+                  //     left: left - translateX + "px",
+                  //     top: top + "px",
+                  //   }
+                  hiddenStyles),
             },
           };
         }, {} as Record<VoltNumber, React.CSSProperties>)

@@ -1,6 +1,6 @@
 import { css, Interpolation, Theme } from "@emotion/react";
 import { Typography } from "common/components/Typography";
-import { FriktionGradientText } from "../FriktionGradientText";
+import { LDotFunGradientText } from "../LDotFunGradientText";
 import { InvestmentStyle } from "./InvestmentStyle";
 import { InvestmentStyleBreakdown } from "./InvestmentStyleBreakdown";
 import { PortfolioTabs } from "./PortfolioTabs";
@@ -27,7 +27,7 @@ export const PortfolioContent = ({
         `}
       >
         Customized strategies to fit your{" "}
-        <FriktionGradientText>investment style</FriktionGradientText>
+        <LDotFunGradientText>investment style</LDotFunGradientText>
       </Typography>
       <PortfolioTabs
         value={investmentStyle}

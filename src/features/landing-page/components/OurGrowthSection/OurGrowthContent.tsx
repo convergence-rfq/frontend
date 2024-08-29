@@ -34,7 +34,7 @@ export const OurGrowthContent = (props: OurGrowthContentProps) => {
         Access optimized portfolio management with a click of a button.
       </DescriptionText>
       <Link to={"/analytics"}>
-        <AppButton color={theme.palette.friktion.radial} variant="outlined">
+        <AppButton color={theme.palette.ldotfun.radial} variant="outlined">
           Learn More
         </AppButton>
       </Link>

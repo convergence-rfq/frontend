@@ -1,4 +1,4 @@
-import { getVoltBolt, getVoltChevronRight } from "09/glow09";
+import { /*getVoltBolt,*/ getVoltChevronRight } from "09/glow09";
 import { VoltNumber } from "09/registry10";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
@@ -10,13 +10,18 @@ import { CardFooterLink } from "./CardFooter";
 import { CardHeader } from "./CardHeader";
 import { CardTitle } from "./CardTitle";
 import { getVoltPath, getVoltTitle } from "./getVoltInfo";
+import { createGlowLdotFunVault } from "./glow";
 
 interface MobileCardProps {
   voltNumber: VoltNumber;
 }
 
 export const MobileCard = ({ voltNumber }: MobileCardProps) => {
-  const Bolt = getVoltBolt(voltNumber);
+  const LDotFunGlow = createGlowLdotFunVault(
+    "rgba(163,255,0,1)",
+    "rgba(0,255,154,1)"
+  );
+  // const Bolt = getVoltBolt(voltNumber);
   const Chevron = getVoltChevronRight(voltNumber);
 
   return (
@@ -26,7 +31,7 @@ export const MobileCard = ({ voltNumber }: MobileCardProps) => {
           margin-bottom: 16px;
         `}
       >
-        <Bolt
+        <LDotFunGlow
           css={css`
             width: 24px;
             height: 24px;

@@ -12,7 +12,7 @@ export const OurProductsSectionText = () => (
         margin-bottom: 32px;
       `}
     >
-      Volts are Friktion's native structured products
+      Volts are leverage.fun's native structured products
     </Typography>
   </OurProductsSectionLayout>
 );

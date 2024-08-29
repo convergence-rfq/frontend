@@ -1,58 +1,59 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
-import { Switch } from "@mui/material";
-import { FunctionComponent, SVGProps } from "react";
+import { Switch, useTheme } from "@mui/material";
+import { FunctionComponent /*SVGProps*/ } from "react";
+import { LDotFun } from "features/icons";
 
 import { Medium, Twitter, Discord } from "components/Icons";
 
-type ThunderProps = SVGProps<SVGSVGElement> & { thunderColor?: string };
+// type ThunderProps = SVGProps<SVGSVGElement> & { thunderColor?: string };
 
-function Thunder(props: ThunderProps) {
-  const { thunderColor, ...svgProps } = props;
+// function Thunder(props: ThunderProps) {
+//   const { thunderColor, ...svgProps } = props;
 
-  return (
-    <svg
-      width={30}
-      height={30}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...svgProps}
-    >
-      <path
-        d="M23.333 16.334 8.366 30l4.067-10.533 10.9-3.133Z"
-        fill={thunderColor ?? "url(#a4)"}
-      />
-      <path
-        d="M3 21 26 0l-6.267 16.2L3 21Z"
-        fill={thunderColor ?? "url(#b4)"}
-      />
-      <defs>
-        <linearGradient
-          id="a4"
-          x1={8.041}
-          y1={16.334}
-          x2={17.086}
-          y2={33.175}
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset={0.023} stopColor="#806FE8" />
-          <stop offset={1} stopColor="#856FE8" />
-        </linearGradient>
-        <linearGradient
-          id="b4"
-          x1={2.5}
-          y1={0}
-          x2={16.398}
-          y2={25.88}
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop offset={0.023} stopColor="#806FE8" />
-          <stop offset={1} stopColor="#856FE8" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
+//   return (
+//     <svg
+//       width={30}
+//       height={30}
+//       fill="none"
+//       xmlns="http://www.w3.org/2000/svg"
+//       {...svgProps}
+//     >
+//       <path
+//         d="M23.333 16.334 8.366 30l4.067-10.533 10.9-3.133Z"
+//         fill={thunderColor ?? "url(#a4)"}
+//       />
+//       <path
+//         d="M3 21 26 0l-6.267 16.2L3 21Z"
+//         fill={thunderColor ?? "url(#b4)"}
+//       />
+//       <defs>
+//         <linearGradient
+//           id="a4"
+//           x1={8.041}
+//           y1={16.334}
+//           x2={17.086}
+//           y2={33.175}
+//           gradientUnits="userSpaceOnUse"
+//         >
+//           <stop offset={0.023} stopColor="#806FE8" />
+//           <stop offset={1} stopColor="#856FE8" />
+//         </linearGradient>
+//         <linearGradient
+//           id="b4"
+//           x1={2.5}
+//           y1={0}
+//           x2={16.398}
+//           y2={25.88}
+//           gradientUnits="userSpaceOnUse"
+//         >
+//           <stop offset={0.023} stopColor="#806FE8" />
+//           <stop offset={1} stopColor="#856FE8" />
+//         </linearGradient>
+//       </defs>
+//     </svg>
+//   );
+// }
 
 const Footer = styled.footer`
   position: absolute;
@@ -119,11 +120,11 @@ const FooterSocialLink = styled.a`
   justify-content: center;
 
   transition: all 300ms ease-in-out;
-  border-color: ${({ theme }) => theme.palette.lavender[600]};
+  border-color: ${({ theme }) => theme.palette.green[500]};
 
   :hover {
     color: ${({ theme }) => theme.palette.grey[0]};
-    background-color: ${({ theme }) => theme.palette.lavender[600]};
+    background-color: ${({ theme }) => theme.palette.green[800]};
 
     > svg {
       fill: ${({ theme }) => theme.palette.grey[0]};
@@ -368,17 +369,18 @@ export const LayoutFooter: FunctionComponent<Props> = ({
   setIsAnimationEnabled,
 }) => {
   const currentYear = new Date().getFullYear();
+  const theme = useTheme();
 
   return (
     <Footer>
       <FooterContainer>
         <FooterTopPart>
           <FooterSocialLinks>
-            <Thunder thunderColor="#FFF" />
+            <LDotFun width="28" height="28" color={theme.palette.green[500]} />
             <p>Smarter returns on your crypto.</p>
             <FooterSocialLinksContainer>
               <FooterSocialLink
-                href="https://friktionlabs.medium.com"
+                href="https://medium.com/convergencerfq"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Medium"
@@ -386,7 +388,7 @@ export const LayoutFooter: FunctionComponent<Props> = ({
                 <Medium />
               </FooterSocialLink>
               <FooterSocialLink
-                href="https://discord.gg/eSkK9X67Qj"
+                href="https://discord.gg/XPCHK98p33"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Discord"
@@ -394,7 +396,7 @@ export const LayoutFooter: FunctionComponent<Props> = ({
                 <Discord />
               </FooterSocialLink>
               <FooterSocialLink
-                href="https://twitter.com/friktion_labs"
+                href="https://twitter.com/convergencerfq"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Twitter"
@@ -424,20 +426,20 @@ export const LayoutFooter: FunctionComponent<Props> = ({
           <FooterBottomLinks className="footer-bottom-links">
             <div>
               <a
-                href="https://docs.friktion.fi"
+                href="https://docs.convergence.so/"
                 target="_blank"
                 rel="noreferrer"
               >
                 About
               </a>
-              <a href="https://docs.friktion.fi/products/faq">FAQ</a>
-              <a href="mailto:team@friktionlabs.com">Contact</a>
+              <a href="https://docs.convergence.so/protocol/faq">FAQ</a>
+              <a href="mailto:team@convergence.so">Contact</a>
               <AnimationSwitch
                 isAnimationEnabled={isAnimationEnabled}
                 setIsAnimationEnabled={setIsAnimationEnabled}
               />
             </div>
-            <p>&copy; {currentYear} Friktion Labs. All rights reserved.</p>
+            <p>&copy; {currentYear} Convergence RFQ. All rights reserved.</p>
           </FooterBottomLinks>
         </FooterBottomPart>
       </FooterContainer>

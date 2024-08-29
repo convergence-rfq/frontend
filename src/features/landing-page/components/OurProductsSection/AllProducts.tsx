@@ -16,7 +16,8 @@ import { DesktopCardLayout } from "./product-cards/DesktopCardLayout";
 import { getCardGlowBG } from "09/glow09";
 import { cardGlowStyles } from "./product-cards/cardGlowStyles";
 
-const VOLTS: VoltNumber[] = [1, 2, 3, 4, 5];
+// const VOLTS: VoltNumber[] = [1, 2, 3, 4, 5];
+const VOLTS: VoltNumber[] = [1];
 
 export const AllProducts = () => {
   const theme = useTheme();

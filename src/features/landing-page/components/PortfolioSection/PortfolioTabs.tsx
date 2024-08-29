@@ -26,7 +26,7 @@ export const PortfolioTabs = ({ value, onChange }: PortfolioTabsProps) => (
         &::before {
           content: "";
           border-radius: 12px;
-          background: ${theme.palette.friktion.radial};
+          background: ${theme.palette.ldotfun.radial};
           position: absolute;
           inset: 0;
           padding: 2px;

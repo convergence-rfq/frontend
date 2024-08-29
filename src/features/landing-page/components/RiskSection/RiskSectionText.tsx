@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import { Typography } from "common/components/Typography";
 import { Link } from "react-router-dom";
 import { DescriptionText } from "../DescriptionText";
-import { FriktionGradientText } from "../FriktionGradientText";
+import { LDotFunGradientText } from "../LDotFunGradientText";
 import { AppButton } from "common/components/Button";
 import { useTheme } from "@mui/material";
 
@@ -19,8 +19,7 @@ export const RiskSectionText = () => {
           max-width: 590px;
         `}
       >
-        Capture <FriktionGradientText>edge</FriktionGradientText>, fully
-        automated
+        Capture <LDotFunGradientText>edge</LDotFunGradientText>, fully automated
       </Typography>
       <DescriptionText
         variant="bodyM"
@@ -30,11 +29,15 @@ export const RiskSectionText = () => {
           max-width: 540px;
         `}
       >
-        Friktion is the first DeFi platform built with risk management as our
-        main focus. Don't be scared by volatile markets - monetize them.
+        leverage.fun is the first DeFi platform built with risk management as
+        our main focus. Don't be scared by volatile markets - monetize them.
       </DescriptionText>
       <Link to={"/analytics"}>
-        <AppButton color={theme.palette.friktion.radial} variant="outlined">
+        <AppButton
+          color={theme.palette.ldotfun.radial}
+          variant="outlined"
+          disabled
+        >
           Explore Analytics
         </AppButton>
       </Link>

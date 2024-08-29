@@ -31,7 +31,7 @@ export const GoalContent = (props: GoalContentProps) => {
           margin-bottom: 40px;
         `}
       >
-        Friktion makes it simple and safer to access leading quantitative
+        leverage.fun makes it simple and safer to access leading quantitative
         strategies.
       </DescriptionText>
       <Link to={"/volts"}>

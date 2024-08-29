@@ -1,4 +1,4 @@
-import { getVoltBolt } from "09/glow09";
+import { BlueA, BlueB /*getVoltBolt*/ } from "09/glow09";
 import { css, Interpolation, Theme } from "@emotion/react";
 import { useAppWalletModal } from "features/wallet";
 import { Typography } from "common/components/Typography";
@@ -6,15 +6,16 @@ import { CardFooter } from "./CardFooter";
 import { CardHeader } from "./CardHeader";
 import { CardTitle } from "./CardTitle";
 import { DesktopCardInner } from "./DesktopCardInner";
+import { createGlowLdotFunVault } from "./glow";
 
 export const ConnectWalletCard = (props: { css?: Interpolation<Theme> }) => {
-  const Bolt = getVoltBolt(6);
+  const LDotFunVault = createGlowLdotFunVault(BlueA, BlueB);
   const { setVisible } = useAppWalletModal();
 
   return (
     <DesktopCardInner
       css={(theme) => css`
-        background: ${theme.palette.friktion.radial};
+        background: ${theme.palette.ldotfun.radial};
         border: none !important;
       `}
       {...props}
@@ -24,7 +25,7 @@ export const ConnectWalletCard = (props: { css?: Interpolation<Theme> }) => {
           margin-bottom: 24px;
         `}
       >
-        <Bolt
+        <LDotFunVault
           css={css`
             width: 24px;
             height: 24px;
@@ -33,7 +34,7 @@ export const ConnectWalletCard = (props: { css?: Interpolation<Theme> }) => {
         <Typography
           variant="bodyM"
           css={css`
-            color: #ffffff;
+            color: #000;
           `}
         >
           Your Portfolio
@@ -42,7 +43,7 @@ export const ConnectWalletCard = (props: { css?: Interpolation<Theme> }) => {
       <CardTitle
         css={css`
           margin-bottom: 16px;
-          color: #ffffff;
+          color: #000;
         `}
       >
         It's your turn
@@ -51,7 +52,7 @@ export const ConnectWalletCard = (props: { css?: Interpolation<Theme> }) => {
         variant="bodyXl"
         css={css`
           flex: 1 1 auto;
-          color: #ffffff;
+          color: #000;
         `}
       >
         Connect your wallet now to start building your portfolio with{" "}
@@ -60,7 +61,7 @@ export const ConnectWalletCard = (props: { css?: Interpolation<Theme> }) => {
             font-weight: 700;
           `}
         >
-          Friktion.
+          leverage.fun
         </span>
       </Typography>
       <CardFooter
@@ -68,7 +69,7 @@ export const ConnectWalletCard = (props: { css?: Interpolation<Theme> }) => {
           setVisible(true);
         }}
         css={css`
-          color: #ffffff;
+          color: #000;
         `}
       >
         Connect Wallet
@@ -77,7 +78,7 @@ export const ConnectWalletCard = (props: { css?: Interpolation<Theme> }) => {
             clip-path: url(#chevronRightPathRelative);
             width: 6px;
             height: 12px;
-            background-color: ${theme.palette.pink[600]};
+            background-color: ${theme.palette.blue[500]};
           `}
         />
       </CardFooter>
