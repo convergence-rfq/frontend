@@ -62,7 +62,7 @@ export const LandingPageHero = () => {
             Smarter returns on your crypto
           </Typography>
           <DescriptionText variant="bodyL">
-            Diversify your portfolio with strategies powered by Friktion.
+            Diversify your portfolio with strategies powered by Leverage.fun
           </DescriptionText>
           <ButtonLink09 to="/volts" css={ctaButton}>
             Get started

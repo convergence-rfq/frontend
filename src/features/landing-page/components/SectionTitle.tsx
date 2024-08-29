@@ -13,7 +13,7 @@ export const SectionTitle = ({
   <Typography
     variant="bodyM"
     css={(theme) => css`
-      color: ${theme.palette.pink[600]};
+      color: ${theme.palette.green[500]};
       font-weight: 700;
       margin-bottom: 32px;
     `}

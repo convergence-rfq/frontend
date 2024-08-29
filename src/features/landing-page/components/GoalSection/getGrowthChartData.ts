@@ -3,7 +3,7 @@ const TOTAL_YEARS_SHOWN = 11;
 
 const MONTHS_IN_YEAR = 12;
 const SAVINGS_ACCOUNT_MPY = 0.25;
-const FRIKTION_MPY_NERFED = 1.5; // MPY is reduced to make chart display scale better
+const lDotFun_MPY_NERFED = 1.5; // MPY is reduced to make chart display scale better
 
 const calculateAnnuity = (
   depositPerPeriod: number,
@@ -26,7 +26,7 @@ export const getGrowthChartData = (
       year: i * (MAX_YEARS / TOTAL_YEARS_SHOWN),
 
       // in the case where we want to display the real returns on mouse hover
-      friktionActual:
+      lDotFunActual:
         actualVoltsMeanMpy !== undefined
           ? calculateAnnuity(
               monthlyDeposits,
@@ -35,9 +35,9 @@ export const getGrowthChartData = (
             )
           : -1,
 
-      friktionDisplay: calculateAnnuity(
+      lDotFunDisplay: calculateAnnuity(
         monthlyDeposits,
-        FRIKTION_MPY_NERFED,
+        lDotFun_MPY_NERFED,
         numberOfDeposits
       ),
       savingsAccount: calculateAnnuity(

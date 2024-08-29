@@ -11,7 +11,7 @@ interface GrowthChartProps {
 }
 
 const CHART_MAX_VALUE = getGrowthChartData(MAX_MONTHLY_DEPOSIT).reduce(
-  (max, { friktionDisplay }) => Math.max(max, friktionDisplay),
+  (max, { lDotFunDisplay }) => Math.max(max, lDotFunDisplay),
   0
 );
 
@@ -31,13 +31,13 @@ export const GrowthChart = ({ monthlyDeposit, ...rest }: GrowthChartProps) => {
         maxValue={CHART_MAX_VALUE}
         gridYValues={GRID_Y_VALUES}
         colors={({ id }) =>
-          id === "friktionDisplay"
-            ? theme.palette.pink[600]
-            : theme.palette.blue[600]
+          id === "lDotFunDisplay"
+            ? theme.palette.green[500]
+            : theme.palette.grey[300]
         }
         borderRadius={2}
         data={data}
-        keys={["friktionDisplay", "savingsAccount"]}
+        keys={["lDotFunDisplay", "savingsAccount"]}
         indexBy="year"
         padding={0.5}
         innerPadding={8}
@@ -87,11 +87,11 @@ export const GrowthChart = ({ monthlyDeposit, ...rest }: GrowthChartProps) => {
       />
       <LegendLayout>
         <LegendItem>
-          <LegendSymbol color={theme.palette.pink[600]} />
+          <LegendSymbol color={theme.palette.green[500]} />
           <LegendText variant="bodyXs">Volts Portfolio</LegendText>
         </LegendItem>
         <LegendItem>
-          <LegendSymbol color={theme.palette.blue[600]} />
+          <LegendSymbol color={theme.palette.grey[300]} />
           <LegendText variant="bodyXs">1% Growth</LegendText>
         </LegendItem>
       </LegendLayout>

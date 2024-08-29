@@ -4,7 +4,7 @@ import { AppButton } from "common/components/Button";
 import { Typography } from "common/components/Typography";
 import { Link } from "react-router-dom";
 import { DescriptionText } from "../DescriptionText";
-import { FriktionGradientText } from "../FriktionGradientText";
+import { LDotFunGradientText } from "../LDotFunGradientText";
 
 interface GoalContentProps {
   css?: Interpolation<Theme>;
@@ -22,8 +22,8 @@ export const GoalContent = (props: GoalContentProps) => {
           margin-bottom: 16px;
         `}
       >
-        Build a <FriktionGradientText>diversified</FriktionGradientText>{" "}
-        portfolio to outperform across market cycles
+        Build a <LDotFunGradientText>diversified</LDotFunGradientText> portfolio
+        to outperform across market cycles
       </Typography>
       <DescriptionText
         variant="bodyL"
@@ -35,7 +35,7 @@ export const GoalContent = (props: GoalContentProps) => {
         strategies.
       </DescriptionText>
       <Link to={"/volts"}>
-        <AppButton color={theme.palette.friktion.radial} variant="outlined">
+        <AppButton color={theme.palette.ldotfun.radial} variant="outlined">
           Explore Volts
         </AppButton>
       </Link>

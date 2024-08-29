@@ -4,7 +4,7 @@ import SliderUnstyled, {
   sliderUnstyledClasses,
   SliderUnstyledThumbSlotProps,
 } from "@mui/base/SliderUnstyled";
-import { FriktionBolt } from "features/icons";
+import { LDotFun } from "features/icons";
 
 interface GrowthSliderProps {
   onChange: (
@@ -33,7 +33,7 @@ const StyledSlider = styled(SliderUnstyled)`
   width: 100%;
   height: 4px;
   padding: 16px 0;
-  color: ${({ theme }) => theme.palette.pink[600]};
+  color: ${({ theme }) => theme.palette.green[500]};
   position: relative;
   cursor: pointer;
   touch-action: none;
@@ -75,7 +75,7 @@ const GrowthSliderThumb = ({
       border-radius: 12px;
       background: ${ownerState.disabled
         ? theme.palette.grey[300]
-        : theme.palette.friktion.radial};
+        : theme.palette.green[800]};
       box-shadow: 0px 4px 24px rgba(153, 153, 153, 0.15);
       width: 32px;
       height: 32px;
@@ -85,7 +85,7 @@ const GrowthSliderThumb = ({
       transform: translate(-50%, -14px);
     `}
   >
-    <FriktionBolt color="#FFFFFF" />
+    <LDotFun color="#FFFFFF" height={20} />
     {children}
   </span>
 );
