@@ -54,8 +54,9 @@ export const voltageDefAdjustedCards = (
       const yuh =
         !card.def?.isVoltage &&
         (voltNumber === undefined || card.volt === voltNumber) &&
-        card.def?.globalId !== "mainnet_income_call_luna" &&
-        card.def?.globalId !== "mainnet_income_put_luna";
+        true; // false hides mSol
+      /*card.def?.globalId !== "mainnet_income_call_luna" &&
+        card.def?.globalId !== "mainnet_income_put_luna";*/
       return filterQuery !== undefined
         ? yuh &&
             (card.underlyingAssetSymbol.toLowerCase().includes(filterQuery) ||

@@ -842,10 +842,10 @@ export const VoltPerformanceAndTitle: React.VFC<{
                   // Add 16 hours to threshold for options auctions to allow for us to manually update.
                   let isCurrentEpoch =
                     item.globalId === "mainnet_protection_usdc_sol" ||
-                    item.globalId === "mainnet_basis_usdc_sol" ||
-                    item.globalId === "mainnet_basis_usdc_btc" ||
-                    item.globalId === "mainnet_income_perp_btc"
-                      ? Date.now() / 1000 < item.endEpoch + 3600 * 4
+                    item.globalId === "mainnet_basis_usdc_sol"
+                      ? // item.globalId === "mainnet_basis_usdc_btc" ||
+                        // item.globalId === "mainnet_income_perp_btc"
+                        Date.now() / 1000 < item.endEpoch + 3600 * 4
                       : Date.now() / 1000 < item.endEpoch + 3600 * 4;
 
                   if (typeof optionProduct !== "string") {
@@ -1008,9 +1008,9 @@ export const VoltPerformanceAndTitle: React.VFC<{
                       >
                         {isCurrentEpoch &&
                         (item.globalId === "mainnet_protection_usdc_sol" ||
-                          item.globalId === "mainnet_basis_usdc_sol" ||
+                          item.globalId === "mainnet_basis_usdc_sol") /*||
                           item.globalId === "mainnet_basis_usdc_btc" ||
-                          item.globalId === "mainnet_income_perp_btc") ? (
+                          item.globalId === "mainnet_income_perp_btc"*/ ? (
                           <Popover
                             destroyTooltipOnHide
                             placement={"bottom"}

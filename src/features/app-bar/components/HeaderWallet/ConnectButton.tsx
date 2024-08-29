@@ -11,8 +11,9 @@ export const ConnectButton = () => {
     <AppButton
       css={css`
         width: 140px;
+        color: black;
       `}
-      color={theme.palette.pink[700]}
+      color={theme.palette.green[500]}
       onClick={connect}
     >
       Connect wallet

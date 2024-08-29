@@ -18,7 +18,7 @@ export const WalletActions = () => {
     <WalletActionsLayout>
       <ActionButton
         variant="outlined"
-        color={theme.palette.friktion.linear}
+        color={theme.palette.ldotfun.linear}
         onClick={() => {
           if (network === "devnet") {
             setNetwork(WalletAdapterNetwork.Mainnet);
@@ -39,7 +39,7 @@ export const WalletActions = () => {
             color: #000000;
           `}
           onClick={disconnect}
-          color={theme.palette.friktion.linear}
+          color={theme.palette.ldotfun.linear}
         >
           Disconnect wallet
         </ActionButton>

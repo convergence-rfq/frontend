@@ -81,7 +81,7 @@ import {
   additionalLidoStakingBoostExplanation,
 } from "./textForTooltipsOnly";
 import {
-  claimPendingWithdraw,
+  // claimPendingWithdraw,
   depositIntoVolt1,
   withdrawFromVolt1,
 } from "./transactionHandler";
@@ -425,7 +425,7 @@ export const ZeroNineManagementModal = (props: {
     {
       staleTime: Infinity,
       retry: 3,
-      enabled: card?.def?.globalId === "mainnet_income_call_stsol",
+      // enabled: card?.def?.globalId === "mainnet_income_call_stsol",
     }
   );
   const lidoStakedSolApyQuery = useQuery<
@@ -442,7 +442,7 @@ export const ZeroNineManagementModal = (props: {
     {
       staleTime: Infinity,
       retry: 3,
-      enabled: card?.def?.globalId === "mainnet_income_call_stsol",
+      // enabled: card?.def?.globalId === "mainnet_income_call_stsol",
     }
   );
   const lidoRewardsForUserQuery = useQuery<
@@ -465,14 +465,14 @@ export const ZeroNineManagementModal = (props: {
       staleTime: Infinity,
       retry: 3,
       enabled:
-        card?.def?.globalId === "mainnet_income_call_stsol" &&
+        /*card?.def?.globalId === "mainnet_income_call_stsol"*/ false &&
         publicKey !== null,
     }
   );
 
   useEffect(() => {
     (async () => {
-      if (card?.def?.globalId === "mainnet_income_call_stsol") {
+      if (/*card?.def?.globalId === "mainnet_income_call_stsol"*/ false) {
         try {
           const solidoSDK = new SolidoSDK(
             "mainnet-beta",
@@ -1126,9 +1126,8 @@ export const ZeroNineManagementModal = (props: {
                     selectedCard.def.globalId as AllProtectionVoltGlobalIdsUnion
                   ]
                 : null,
-              selectedCard.def.globalId === "mainnet_income_call_stsol"
-                ? lidoRewardsApy
-                : undefined
+              // selectedCard.def.globalId === "mainnet_income_call_stsol"
+              false ? lidoRewardsApy : undefined
             )}
           >
             Projected APY
@@ -1143,7 +1142,8 @@ export const ZeroNineManagementModal = (props: {
           </BlackAndWhiteText>
         </InfoDatum>
       </InfoRow>
-      {selectedCard.def.globalId === "mainnet_income_call_stsol" && (
+      {false && (
+        // {selectedCard.def.globalId === "mainnet_income_call_stsol" && (
         <InfoRow>
           <InfoLabel>
             <InlineDocMissingLink
@@ -1868,7 +1868,8 @@ export const ZeroNineManagementModal = (props: {
   let diaperWrapper = (
     <DiaperWrapper
       css={css`
-        height: ${selectedCard.def.globalId === "mainnet_income_call_stsol" &&
+        height: ${false &&
+        // height: ${selectedCard.def.globalId === "mainnet_income_call_stsol" &&
         isLidoSectionExpanded &&
         page === "deposit"
           ? "242px"
@@ -1877,7 +1878,8 @@ export const ZeroNineManagementModal = (props: {
     >
       <DiaperBody
         className={
-          selectedCard.def.globalId === "mainnet_income_call_stsol" &&
+          false &&
+          // selectedCard.def.globalId === "mainnet_income_call_stsol" &&
           page === "deposit" &&
           isLidoSectionExpanded
             ? "expanded"
@@ -1893,7 +1895,8 @@ export const ZeroNineManagementModal = (props: {
       >
         {extraInfoTable}
       </DiaperBody>
-      {selectedCard.def.globalId === "mainnet_income_call_stsol" &&
+      {false &&
+        // {selectedCard.def.globalId === "mainnet_income_call_stsol" &&
         page === "deposit" && (
           <DiaperBody
             className={isLidoSectionExpanded ? "expanded" : ""}
@@ -2696,16 +2699,17 @@ export const ZeroNineManagementModal = (props: {
               }}
             />
           </ConfirmButtonWrapper>
-          {(selectedCard.def?.globalId === "mainnet_income_call_ftt" ||
-            selectedCard.def?.globalId === "mainnet_income_call_eth") && (
-            <ConfirmButtonWrapper
-              className="claimButton"
-              css={css`
-                padding: 0 20px 22px 20px;
-                margin-top: -6px;
-              `}
-            >
-              <AsyncButton09
+          {
+            /*(selectedCard.def?.globalId === "mainnet_income_call_ftt" ||
+            selectedCard.def?.globalId === "mainnet_income_call_eth")*/ false && (
+              <ConfirmButtonWrapper
+                className="claimButton"
+                css={css`
+                  padding: 0 20px 22px 20px;
+                  margin-top: -6px;
+                `}
+              >
+                {/* <AsyncButton09
                 theme={selectedCard.volt}
                 label={`Possibly Claim Old ${selectedCard.def.depositToken.symbol}`}
                 onClick={async (goodies) => {
@@ -2724,9 +2728,10 @@ export const ZeroNineManagementModal = (props: {
                     selectedCard?.data?.extraVaultData ?? undefined
                   );
                 }}
-              />
-            </ConfirmButtonWrapper>
-          )}
+              /> */}
+              </ConfirmButtonWrapper>
+            )
+          }
         </InteractionContainer>
       );
     } else if (page === "swap") {
@@ -3985,7 +3990,8 @@ export const ZeroNineManagementModal = (props: {
                 <ModalContent>
                   {iContainer}
                   {page === "deposit" &&
-                    selectedCard.def.globalId === "mainnet_income_call_stsol" &&
+                    false &&
+                    // selectedCard.def.globalId === "mainnet_income_call_stsol" &&
                     extraLidoContentShownIfLidoVolt}
                   {diaperWrapper}
                 </ModalContent>

@@ -55,10 +55,11 @@ export const WalletIntro = ({
         <AppButton
           css={css`
             height: 38px;
+            color: black;
             padding-top: 0;
             padding-bottom: 0;
           `}
-          color={theme.palette.pink[700]}
+          color={theme.palette.green[500]}
           onClick={() => {
             setWalletToDownload(null);
             goToGetWalletScreen();

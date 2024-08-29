@@ -13,7 +13,7 @@ import {
 } from "./format09";
 import { getDailyExpiration, getWeeklyExpiration } from "./FormattedCountdown";
 import { ImportantAssetLogos } from "./greatLogos/assetLogos";
-import { AllAssetsUnion, ASSET_AVAX, ASSET_ETH } from "../features/wormhole";
+import { AllAssetsUnion /*ASSET_AVAX, ASSET_ETH*/ } from "../features/wormhole";
 
 export const AllSymbols = [
   "BTC",
@@ -627,8 +627,8 @@ export const getAveragedEpochYield = (
         row.realizedPnl < 0 &&
         !(
           row.globalId === "mainnet_basis_usdc_sol" ||
-          row.globalId === "mainnet_basis_usdc_btc" ||
-          row.globalId === "mainnet_income_perp_btc" ||
+          // row.globalId === "mainnet_basis_usdc_btc" ||
+          // row.globalId === "mainnet_income_perp_btc" ||
           row.globalId === "mainnet_protection_usdc_sol"
         )
       ) {
@@ -766,18 +766,18 @@ const DevnetBTCToken = new UltraToken(
   6
 );
 
-const MainnetBTCToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E",
-    name: "Bitcoin (Sollet)",
-    decimals: 6, // Decimal info at: https://solscan.io/token/9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E
-    symbol: "BTC",
-    logoURI: ImportantAssetLogos.BTC,
-  },
-  4,
-  6
-);
+// const MainnetBTCToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E",
+//     name: "Bitcoin (Sollet)",
+//     decimals: 6, // Decimal info at: https://solscan.io/token/9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E
+//     symbol: "BTC",
+//     logoURI: ImportantAssetLogos.BTC,
+//   },
+//   4,
+//   6
+// );
 export const DevnetUSDCToken = new UltraToken(
   {
     chainId: ChainId.devnet,
@@ -817,18 +817,18 @@ export const MainnetUSDCToken = new UltraToken(
   2
 );
 
-const MainnetETHToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
-    name: "Ethereum (Wormhole)",
-    decimals: 8, // Decimal info at: https://solscan.io/token/7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs
-    symbol: "ETH",
-    logoURI: ImportantAssetLogos.ETH,
-  },
-  4,
-  6
-);
+// const MainnetETHToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs",
+//     name: "Ethereum (Wormhole)",
+//     decimals: 8, // Decimal info at: https://solscan.io/token/7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs
+//     symbol: "ETH",
+//     logoURI: ImportantAssetLogos.ETH,
+//   },
+//   4,
+//   6
+// );
 
 const MainnetMarinadeToken = new UltraToken(
   {
@@ -856,96 +856,96 @@ const MainnetMNDEToken = new UltraToken(
   2
 );
 
-const MainnetSamoToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
-    name: "Samoyed Coin",
-    decimals: 9, // Decimal info at: https://solscan.io/token/7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU
-    symbol: "SAMO",
-    logoURI: ImportantAssetLogos.SAMO,
-  },
-  1,
-  2
-);
+// const MainnetSamoToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+//     name: "Samoyed Coin",
+//     decimals: 9, // Decimal info at: https://solscan.io/token/7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU
+//     symbol: "SAMO",
+//     logoURI: ImportantAssetLogos.SAMO,
+//   },
+//   1,
+//   2
+// );
 
-const MainnetNearToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "BYPsjxa3YuZESQz1dKuBw1QSFCSpecsm8nCQhY5xbU1Z",
-    name: "Near (Allbridge)",
-    decimals: 9, // Decimal info at: https://solscan.io/token/7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU
-    symbol: "NEAR",
-    logoURI: ImportantAssetLogos.NEAR,
-  },
-  1,
-  2
-);
+// const MainnetNearToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "BYPsjxa3YuZESQz1dKuBw1QSFCSpecsm8nCQhY5xbU1Z",
+//     name: "Near (Allbridge)",
+//     decimals: 9, // Decimal info at: https://solscan.io/token/7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU
+//     symbol: "NEAR",
+//     logoURI: ImportantAssetLogos.NEAR,
+//   },
+//   1,
+//   2
+// );
 
-const MainnetFTTToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "EzfgjvkSwthhgHaceR3LnKXUoRkP6NUhfghdaHAj1tUv",
-    name: "FTT (Wormhole)",
-    decimals: 8, // Decimal info at: https://solscan.io/token/EzfgjvkSwthhgHaceR3LnKXUoRkP6NUhfghdaHAj1tUv
-    symbol: "FTT",
-    logoURI: ImportantAssetLogos.FTT,
-  },
-  4,
-  6
-);
+// const MainnetFTTToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "EzfgjvkSwthhgHaceR3LnKXUoRkP6NUhfghdaHAj1tUv",
+//     name: "FTT (Wormhole)",
+//     decimals: 8, // Decimal info at: https://solscan.io/token/EzfgjvkSwthhgHaceR3LnKXUoRkP6NUhfghdaHAj1tUv
+//     symbol: "FTT",
+//     logoURI: ImportantAssetLogos.FTT,
+//   },
+//   4,
+//   6
+// );
 
-const MainnetSRMToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt",
-    name: "Serum",
-    decimals: 6, // Decimal info at: https://solscan.io/token/SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt
-    symbol: "SRM",
-    logoURI: ImportantAssetLogos.SRM,
-  },
-  2,
-  3
-);
+// const MainnetSRMToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt",
+//     name: "Serum",
+//     decimals: 6, // Decimal info at: https://solscan.io/token/SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt
+//     symbol: "SRM",
+//     logoURI: ImportantAssetLogos.SRM,
+//   },
+//   2,
+//   3
+// );
 
-const MainnetMNGOToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac",
-    name: "Mango",
-    decimals: 6, // Decimal info at: https://solscan.io/token/MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac
-    symbol: "MNGO",
-    logoURI: ImportantAssetLogos.MNGO,
-  },
-  1,
-  2
-);
+// const MainnetMNGOToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac",
+//     name: "Mango",
+//     decimals: 6, // Decimal info at: https://solscan.io/token/MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac
+//     symbol: "MNGO",
+//     logoURI: ImportantAssetLogos.MNGO,
+//   },
+//   1,
+//   2
+// );
 
-const MainnetSCNSOLToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm",
-    name: "Socean SOL",
-    decimals: 9, // Decimal info at: https://solscan.io/token/5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm
-    symbol: "scnSOL",
-    logoURI: ImportantAssetLogos.scnSOL,
-  },
-  1,
-  2
-);
+// const MainnetSCNSOLToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm",
+//     name: "Socean SOL",
+//     decimals: 9, // Decimal info at: https://solscan.io/token/5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm
+//     symbol: "scnSOL",
+//     logoURI: ImportantAssetLogos.scnSOL,
+//   },
+//   1,
+//   2
+// );
 
-const MainnetSBRToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "Saber2gLauYim4Mvftnrasomsv6NvAuncvMEZwcLpD1",
-    name: "Saber",
-    decimals: 6, // Decimal info at: https://solscan.io/token/Saber2gLauYim4Mvftnrasomsv6NvAuncvMEZwcLpD1
-    symbol: "SBR",
-    logoURI: ImportantAssetLogos.SBR,
-  },
-  1,
-  2
-);
+// const MainnetSBRToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "Saber2gLauYim4Mvftnrasomsv6NvAuncvMEZwcLpD1",
+//     name: "Saber",
+//     decimals: 6, // Decimal info at: https://solscan.io/token/Saber2gLauYim4Mvftnrasomsv6NvAuncvMEZwcLpD1
+//     symbol: "SBR",
+//     logoURI: ImportantAssetLogos.SBR,
+//   },
+//   1,
+//   2
+// );
 
 export const MainnetLUNAToken = new UltraToken(
   {
@@ -973,44 +973,44 @@ export const MainnetUSTToken = new UltraToken(
   2
 );
 
-const MainnetRAYToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
-    name: "Raydium",
-    decimals: 6, // Decimal info at: https://solscan.io/token/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R
-    symbol: "RAY",
-    logoURI: ImportantAssetLogos.RAY,
-  },
-  1,
-  2
-);
+// const MainnetRAYToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+//     name: "Raydium",
+//     decimals: 6, // Decimal info at: https://solscan.io/token/4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R
+//     symbol: "RAY",
+//     logoURI: ImportantAssetLogos.RAY,
+//   },
+//   1,
+//   2
+// );
 
-const MainnetSTEPToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "StepAscQoEioFxxWGnh2sLBDFp9d8rvKz2Yp39iDpyT",
-    name: "Step",
-    decimals: 9, // Decimal info at: https://solscan.io/token/StepAscQoEioFxxWGnh2sLBDFp9d8rvKz2Yp39iDpyT
-    symbol: "STEP",
-    logoURI: ImportantAssetLogos.STEP,
-  },
-  1,
-  2
-);
+// const MainnetSTEPToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "StepAscQoEioFxxWGnh2sLBDFp9d8rvKz2Yp39iDpyT",
+//     name: "Step",
+//     decimals: 9, // Decimal info at: https://solscan.io/token/StepAscQoEioFxxWGnh2sLBDFp9d8rvKz2Yp39iDpyT
+//     symbol: "STEP",
+//     logoURI: ImportantAssetLogos.STEP,
+//   },
+//   1,
+//   2
+// );
 
-const MainnetAVAXToken = new UltraToken(
-  {
-    chainId: ChainId["mainnet-beta"],
-    address: "KgV1GvrHQmRBY8sHQQeUKwTm2r2h8t4C8qt12Cw1HVE",
-    name: "AVAX (Wormhole)",
-    decimals: 8, // Decimal info at: https://solscan.io/token/KgV1GvrHQmRBY8sHQQeUKwTm2r2h8t4C8qt12Cw1HVE
-    symbol: "AVAX",
-    logoURI: ImportantAssetLogos.AVAX,
-  },
-  1,
-  2
-);
+// const MainnetAVAXToken = new UltraToken(
+//   {
+//     chainId: ChainId["mainnet-beta"],
+//     address: "KgV1GvrHQmRBY8sHQQeUKwTm2r2h8t4C8qt12Cw1HVE",
+//     name: "AVAX (Wormhole)",
+//     decimals: 8, // Decimal info at: https://solscan.io/token/KgV1GvrHQmRBY8sHQQeUKwTm2r2h8t4C8qt12Cw1HVE
+//     symbol: "AVAX",
+//     logoURI: ImportantAssetLogos.AVAX,
+//   },
+//   1,
+//   2
+// );
 
 export const MainnetLIDOSTSOLToken = new UltraToken(
   {
@@ -1086,59 +1086,59 @@ const INTERNAL_SPECIFICALLY_TYPED_SUBVOLT_INFO = {
     quote: DevnetUSDCToken,
     depositToken: DevnetSOLToken,
   }),
-  mainnet_income_call_eth: new SubvoltDef10({
-    globalId: "mainnet_income_call_eth",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.ETH,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs"),
-    voltVaultId: new PublicKey("A2jbvwftkAzU5hLUmBePdfqZQsop7jydZirLS5NsRVtx"),
-    extraVaultDataId: new PublicKey(
-      "8fdEXEywMGXPx9T8iv8PGdd2KGX9ez3U1TTzapk8xhYR"
-    ),
-    vaultAuthority: new PublicKey(
-      "FThcy5XXvab5u3jbA6NjWKdMNiCSV3oY5AAkvEvpa8wp"
-    ),
-    shareTokenDecimals: 6,
-    spotSerumMarketId: new PublicKey(
-      "DsWLLr4QQpXpMzQ8Y4p68Sj6Ei3fGGwA6c672dtyDhAA"
-    ),
-    expectedApy: 18.2,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetETHToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetETHToken,
-    wormholeAsset: ASSET_ETH,
-  }),
-  mainnet_income_put_eth: new SubvoltDef10({
-    globalId: "mainnet_income_put_eth",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.ETH,
-    optionType: "put",
-    volt: 2,
-    mint: new PublicKey("7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs"),
-    voltVaultId: new PublicKey("2QRujUdQwz5p7XNQWh48KbyZ9AMEbG7WbkuqMMS9KdE5"),
-    extraVaultDataId: new PublicKey(
-      "B6jqwLkq4F5e5YbVvNcEra6T5tQ2D5GSjK7sfkJR9N5S"
-    ),
-    vaultAuthority: new PublicKey(
-      "EA29Xf3HGMtYziw7UKZDUKby7gkoCbXwmiNKwc7z54Ax"
-    ),
-    shareTokenDecimals: MainnetUSDCToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "dg4cpuXc6nWq7L7b7UkKJKFEMGBrUKAjLBGWeLFSnXW"
-    ),
-    expectedApy: 29.3,
-    shortDisplayDecimals: 2,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetETHToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetUSDCToken,
-  }),
+  // mainnet_income_call_eth: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_eth",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.ETH,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs"),
+  //   voltVaultId: new PublicKey("A2jbvwftkAzU5hLUmBePdfqZQsop7jydZirLS5NsRVtx"),
+  //   extraVaultDataId: new PublicKey(
+  //     "8fdEXEywMGXPx9T8iv8PGdd2KGX9ez3U1TTzapk8xhYR"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "FThcy5XXvab5u3jbA6NjWKdMNiCSV3oY5AAkvEvpa8wp"
+  //   ),
+  //   shareTokenDecimals: 6,
+  //   spotSerumMarketId: new PublicKey(
+  //     "DsWLLr4QQpXpMzQ8Y4p68Sj6Ei3fGGwA6c672dtyDhAA"
+  //   ),
+  //   expectedApy: 18.2,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetETHToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetETHToken,
+  //   wormholeAsset: ASSET_ETH,
+  // }),
+  // mainnet_income_put_eth: new SubvoltDef10({
+  //   globalId: "mainnet_income_put_eth",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.ETH,
+  //   optionType: "put",
+  //   volt: 2,
+  //   mint: new PublicKey("7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs"),
+  //   voltVaultId: new PublicKey("2QRujUdQwz5p7XNQWh48KbyZ9AMEbG7WbkuqMMS9KdE5"),
+  //   extraVaultDataId: new PublicKey(
+  //     "B6jqwLkq4F5e5YbVvNcEra6T5tQ2D5GSjK7sfkJR9N5S"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "EA29Xf3HGMtYziw7UKZDUKby7gkoCbXwmiNKwc7z54Ax"
+  //   ),
+  //   shareTokenDecimals: MainnetUSDCToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "dg4cpuXc6nWq7L7b7UkKJKFEMGBrUKAjLBGWeLFSnXW"
+  //   ),
+  //   expectedApy: 29.3,
+  //   shortDisplayDecimals: 2,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetETHToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetUSDCToken,
+  // }),
   mainnet_income_call_sol: new SubvoltDef10({
     globalId: "mainnet_income_call_sol",
     network: "mainnet-beta",
@@ -1193,33 +1193,33 @@ const INTERNAL_SPECIFICALLY_TYPED_SUBVOLT_INFO = {
     quote: MainnetUSDCToken,
     depositToken: MainnetSOLToken,
   }),
-  mainnet_income_put_sol_high: new SubvoltDef10({
-    globalId: "mainnet_income_put_sol_high",
-    isVoltage: true,
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.SOL,
-    optionType: "put",
-    volt: 2,
-    mint: new PublicKey("So11111111111111111111111111111111111111112"),
-    voltVaultId: new PublicKey("BTuiZkgodmKKJtNDhVQGvAzqW1fdSNWasQADDTTyoAxN"),
-    extraVaultDataId: new PublicKey(
-      "2WizZuJuh1adXkAYMhHPF15zDUY2dBwMeUpSLCZ9MLYK"
-    ),
-    vaultAuthority: new PublicKey(
-      "BThMeTgWZBoBbAzp9sK9T7gQzpQDQdRQUVLtVQ3781q1"
-    ),
-    shareTokenDecimals: MainnetUSDCToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "C6z5k5fQmdeu7QNnXH1rSYYm22D5dqsMfqEaWgqSUdhM"
-    ),
-    expectedApy: 52.5,
-    shortDisplayDecimals: 2,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetSOLToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetUSDCToken,
-  }),
+  // mainnet_income_put_sol_high: new SubvoltDef10({
+  //   globalId: "mainnet_income_put_sol_high",
+  //   isVoltage: true,
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.SOL,
+  //   optionType: "put",
+  //   volt: 2,
+  //   mint: new PublicKey("So11111111111111111111111111111111111111112"),
+  //   voltVaultId: new PublicKey("BTuiZkgodmKKJtNDhVQGvAzqW1fdSNWasQADDTTyoAxN"),
+  //   extraVaultDataId: new PublicKey(
+  //     "2WizZuJuh1adXkAYMhHPF15zDUY2dBwMeUpSLCZ9MLYK"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "BThMeTgWZBoBbAzp9sK9T7gQzpQDQdRQUVLtVQ3781q1"
+  //   ),
+  //   shareTokenDecimals: MainnetUSDCToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "C6z5k5fQmdeu7QNnXH1rSYYm22D5dqsMfqEaWgqSUdhM"
+  //   ),
+  //   expectedApy: 52.5,
+  //   shortDisplayDecimals: 2,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetSOLToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetUSDCToken,
+  // }),
   mainnet_income_put_sol: new SubvoltDef10({
     globalId: "mainnet_income_put_sol",
     network: "mainnet-beta",
@@ -1247,62 +1247,62 @@ const INTERNAL_SPECIFICALLY_TYPED_SUBVOLT_INFO = {
     depositToken: MainnetUSDCToken,
     highVoltage: "mainnet_income_put_sol_high",
   }),
-  mainnet_income_put_tsUSDC: new SubvoltDef10({
-    globalId: "mainnet_income_put_tsUSDC",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.tsUSDC,
-    optionType: "put",
-    volt: 2,
-    mint: new PublicKey("Cvvh8nsKZet59nsDDo3orMa3rZnPWQhpgrMCVcRDRgip"),
-    voltVaultId: new PublicKey("FFhHmdwHS9myqQPQUMTu8hX56zQETNPC4Bu95ZGb1j5P"),
-    extraVaultDataId: new PublicKey(
-      "2ZQCtSBFAuq6hveRtZ7QiNbKL6v85c7rxEFvs1cdKhSX"
-    ),
-    vaultAuthority: new PublicKey(
-      "AQRGh6PU7LzDHvvoPNS7wVVQaCBeftw9kVDAnvuEjbs8"
-    ),
-    shareTokenDecimals: MainnettsUSDCToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "9ikXcd2mGY2dAtvfEx5vhVSzU28SYv7nMk2cg59bzFeD"
-    ),
-    expectedApy: 25.4,
-    shortDisplayDecimals: 2,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetSOLToken,
-    quote: MainnetUSDCToken, // This is intentional. Please see "changed" 😂: https://github.com/Friktion-Labs/dapp/commit/7c82fb6702e0ef85ca0cc2947b65b040671ce62a
-    depositToken: MainnettsUSDCToken,
-    externalLink: "https://tulip.garden/strategy",
-    shouldHideSwapTab: true,
-  }),
-  mainnet_income_put_pai: new SubvoltDef10({
-    globalId: "mainnet_income_put_pai",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.PAI,
-    optionType: "put",
-    volt: 2,
-    mint: new PublicKey("Ea5SjE2Y6yvCeW5dYTn7PYMuW5ikXkvbGdcmSnXeaLjS"),
-    voltVaultId: new PublicKey("5EU8ykqwFczHa2m8RLFWusRQkBW58kWYCTdCY6mAdMce"),
-    extraVaultDataId: new PublicKey(
-      "9GCaueg1Qv6HixopaGJ2JaSvqnsdfkKexqieyfjCTNfu"
-    ),
-    vaultAuthority: new PublicKey(
-      "7Nvs437r3waBgBoFpgsqBjouy5PLP7h2wUFbsF1FD2AK"
-    ),
-    shareTokenDecimals: MainnetPAIToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "Fze6inVkgQtJod6sPfhuTeG1GYAkdRCujjF7FxyYuywk"
-    ),
-    expectedApy: 31.8,
-    shortDisplayDecimals: 2,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetSOLToken,
-    quote: MainnetUSDCToken, // This is intentional. Please see "changed" 😂: https://github.com/Friktion-Labs/dapp/commit/7c82fb6702e0ef85ca0cc2947b65b040671ce62a
-    depositToken: MainnetPAIToken,
-    externalLink: "https://parrot.fi/mint/",
-    shouldHideSwapTab: true,
-  }),
+  // mainnet_income_put_tsUSDC: new SubvoltDef10({
+  //   globalId: "mainnet_income_put_tsUSDC",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.tsUSDC,
+  //   optionType: "put",
+  //   volt: 2,
+  //   mint: new PublicKey("Cvvh8nsKZet59nsDDo3orMa3rZnPWQhpgrMCVcRDRgip"),
+  //   voltVaultId: new PublicKey("FFhHmdwHS9myqQPQUMTu8hX56zQETNPC4Bu95ZGb1j5P"),
+  //   extraVaultDataId: new PublicKey(
+  //     "2ZQCtSBFAuq6hveRtZ7QiNbKL6v85c7rxEFvs1cdKhSX"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "AQRGh6PU7LzDHvvoPNS7wVVQaCBeftw9kVDAnvuEjbs8"
+  //   ),
+  //   shareTokenDecimals: MainnettsUSDCToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "9ikXcd2mGY2dAtvfEx5vhVSzU28SYv7nMk2cg59bzFeD"
+  //   ),
+  //   expectedApy: 25.4,
+  //   shortDisplayDecimals: 2,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetSOLToken,
+  //   quote: MainnetUSDCToken, // This is intentional. Please see "changed" 😂: https://github.com/Friktion-Labs/dapp/commit/7c82fb6702e0ef85ca0cc2947b65b040671ce62a
+  //   depositToken: MainnettsUSDCToken,
+  //   externalLink: "https://tulip.garden/strategy",
+  //   shouldHideSwapTab: true,
+  // }),
+  // mainnet_income_put_pai: new SubvoltDef10({
+  //   globalId: "mainnet_income_put_pai",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.PAI,
+  //   optionType: "put",
+  //   volt: 2,
+  //   mint: new PublicKey("Ea5SjE2Y6yvCeW5dYTn7PYMuW5ikXkvbGdcmSnXeaLjS"),
+  //   voltVaultId: new PublicKey("5EU8ykqwFczHa2m8RLFWusRQkBW58kWYCTdCY6mAdMce"),
+  //   extraVaultDataId: new PublicKey(
+  //     "9GCaueg1Qv6HixopaGJ2JaSvqnsdfkKexqieyfjCTNfu"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "7Nvs437r3waBgBoFpgsqBjouy5PLP7h2wUFbsF1FD2AK"
+  //   ),
+  //   shareTokenDecimals: MainnetPAIToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "Fze6inVkgQtJod6sPfhuTeG1GYAkdRCujjF7FxyYuywk"
+  //   ),
+  //   expectedApy: 31.8,
+  //   shortDisplayDecimals: 2,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetSOLToken,
+  //   quote: MainnetUSDCToken, // This is intentional. Please see "changed" 😂: https://github.com/Friktion-Labs/dapp/commit/7c82fb6702e0ef85ca0cc2947b65b040671ce62a
+  //   depositToken: MainnetPAIToken,
+  //   externalLink: "https://parrot.fi/mint/",
+  //   shouldHideSwapTab: true,
+  // }),
   mainnet_income_call_marinade: new SubvoltDef10({
     globalId: "mainnet_income_call_marinade",
     network: "mainnet-beta",
@@ -1339,483 +1339,483 @@ const INTERNAL_SPECIFICALLY_TYPED_SUBVOLT_INFO = {
       redeemer: "special-marinade",
     },
   }),
-  mainnet_income_call_stsol: new SubvoltDef10({
-    globalId: "mainnet_income_call_stsol",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.stSOL,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("7dHbWXmci3dT8UFYWYZweBLXgycu7Y3iL6trKn1Y7ARj"),
-    voltVaultId: new PublicKey("9q5kEMkY28NXjxovpr1ssLLCAHgmyYzNmgAksp6voeJ8"),
-    extraVaultDataId: new PublicKey(
-      "H5kRu6xZ2yZw86VuyfvkVbRq2Ac4LTM2arWLG3QKtC1o"
-    ),
-    vaultAuthority: new PublicKey(
-      "2Ahpeqc1bo7Y4dVknvZUVfZPhHhym7JN6az2XMbUA6QA"
-    ),
-    shareTokenDecimals: MainnetLIDOSTSOLToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "CKxf35g1CDGSdF6uXFvxAzjEK7iy7G6PZQqcCJFCjqDm"
-    ),
-    expectedApy: 21.0,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetLIDOSTSOLToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetLIDOSTSOLToken,
-    doesHaveAutomatedEmissions: true,
-  }),
-  mainnet_income_call_socean: new SubvoltDef10({
-    globalId: "mainnet_income_call_socean",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.scnSOL,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm"),
-    voltVaultId: new PublicKey("3ZYabzsHY2XGuVBBbAgrxitPhmHSKLDCKqEp3vpX9Jb1"),
-    extraVaultDataId: new PublicKey(
-      "5J3MHJAkHG3otVPhFAxgAcNV6cURk2CFyTLpHPKAbYeu"
-    ),
-    vaultAuthority: new PublicKey(
-      "A5MpyajTy6hdsg3S2em5ukcgY1ZBhxTxEKv8BgHajv1A"
-    ),
-    shareTokenDecimals: MainnetSCNSOLToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "4ge6UnhomusubG4S5bYGBYk2JFskvQ9axLf9FB1fGpLY"
-    ),
-    expectedApy: 22.4,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetSCNSOLToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetSCNSOLToken,
-  }),
-  mainnet_income_call_btc: new SubvoltDef10({
-    globalId: "mainnet_income_call_btc",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.BTC,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E"),
-    voltVaultId: new PublicKey("CdZ1Mgo3927bsYdKK5rnzGtwek3NLWdvoTSSm2TJjdqW"),
-    extraVaultDataId: new PublicKey(
-      "6MpBDp3TCFTYrokZaGSpm5k5Wq9GT1P3SKx15eMvtNnh"
-    ),
-    vaultAuthority: new PublicKey(
-      "DA1M8mw7GnPNKU9ReANtHPQyuVzKZtsuuSbCyc2uX2du"
-    ),
-    shareTokenDecimals: MainnetBTCToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "2NksTwSCzD2XERcZN5FHgTWhCVPePWt59mBKmsKGhbhP"
-    ),
-    expectedApy: 16.6,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: 5.5,
-    fallbackGlobalDepositCap: 11,
-    underlying: MainnetBTCToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetBTCToken,
-  }),
-  mainnet_income_put_btc: new SubvoltDef10({
-    globalId: "mainnet_income_put_btc",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.BTC,
-    optionType: "put",
-    volt: 2,
-    mint: new PublicKey("9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E"),
-    voltVaultId: new PublicKey("CzFUVBXaAxWRQ3JeJwsZHqDQUxBbUJLZtdoBQ3KPtsuB"),
-    extraVaultDataId: new PublicKey(
-      "ByJbHcLvbgEAbo9sMetMFeZhHko6SNFR1vPX8FnEvYAu"
-    ),
-    vaultAuthority: new PublicKey(
-      "GrB6vbG2WP7eEnbwgxUbBGRMeXYq139jo2o9oW8cNK8f"
-    ),
-    shareTokenDecimals: MainnetUSDCToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "52Uwi5LjZEox2h9jT3TfQemz15d887FQLbn69RR7hDgF"
-    ),
-    expectedApy: 23.7,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: 5.5,
-    fallbackGlobalDepositCap: 11,
-    underlying: MainnetBTCToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetUSDCToken,
-  }),
-  mainnet_income_call_srm: new SubvoltDef10({
-    globalId: "mainnet_income_call_srm",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.SRM,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt"),
-    voltVaultId: new PublicKey("Ef2CD9yhQE7BvReQXct68uuYFW8GLKj62u2YPfmua3JY"),
-    extraVaultDataId: new PublicKey(
-      "9e7XC1K2sPbDALCA7ZD8oxockHLe6KtXjEKhjEzqEGuj"
-    ),
-    vaultAuthority: new PublicKey(
-      "2P427N5sYcEXvZAZwqNzjXEHsBMESQoLyjNquTSmGPMb"
-    ),
-    shareTokenDecimals: MainnetSRMToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "DaTyog7M78LnH69yowfVKRAnETPEeJPjyeh1BpKDuQeD"
-    ),
-    expectedApy: 25.9,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetSRMToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetSRMToken,
-  }),
-  mainnet_income_call_ftt: new SubvoltDef10({
-    globalId: "mainnet_income_call_ftt",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.FTT,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("EzfgjvkSwthhgHaceR3LnKXUoRkP6NUhfghdaHAj1tUv"),
-    voltVaultId: new PublicKey("8qjBanq5cxc3FzsaEznKfpsbPwfMVoB6AxLXY7pe3fEX"),
-    extraVaultDataId: new PublicKey(
-      "ATkNEzFX7ZygpzGMLRphSgfiK512nBBZHcKjjJdFgMdq"
-    ),
-    vaultAuthority: new PublicKey(
-      "7KqHFuUksvNhrWgoacKkqyp2RwfBNdypCYgK9nxD1d6K"
-    ),
-    shareTokenDecimals: 6,
-    spotSerumMarketId: new PublicKey(
-      "GWjUq2xcTVzaWbpJ3quTSeJnFbicWamcFZREyyNHCHJe"
-    ),
-    expectedApy: 21.3,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetFTTToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetFTTToken,
-  }),
-  mainnet_income_call_step: new SubvoltDef10({
-    globalId: "mainnet_income_call_step",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.STEP,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("StepAscQoEioFxxWGnh2sLBDFp9d8rvKz2Yp39iDpyT"),
-    voltVaultId: new PublicKey("8YtJU58RUbvrdqCyTK7zJBSmCafVvZfysdXYq3W7YDai"),
-    extraVaultDataId: new PublicKey(
-      "6hSjQYdLAwVvBAnf9ye5XjbhDx8dky31BWr6jq34MAfu"
-    ),
-    vaultAuthority: new PublicKey(
-      "FiEHDTKT6X7VFwGaUmsm1XXYr8vvkoSR5EqcY4znpefq"
-    ),
-    shareTokenDecimals: MainnetSTEPToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "Di8cexymBtunKZb8CQC9g6188k98NeZEhoscED9oExWM"
-    ),
-    expectedApy: 17.5,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetSTEPToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetSTEPToken,
-  }),
-  mainnet_income_call_avax: new SubvoltDef10({
-    globalId: "mainnet_income_call_avax",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.AVAX,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("KgV1GvrHQmRBY8sHQQeUKwTm2r2h8t4C8qt12Cw1HVE"),
-    voltVaultId: new PublicKey("7mzbtntRJL7QPw2rtAcFhqVM7iBvCa6McaatZ5RPPhag"),
-    extraVaultDataId: new PublicKey(
-      "7MDpCGNLKJyUaXhbFe6WqkQHvLKELLwibYj1H5FknkmA"
-    ),
-    vaultAuthority: new PublicKey(
-      "5LrULR5w9N1dfnJ9vHnzRkQi9uBL3CkSRWkDGTG6dP1e"
-    ),
-    shareTokenDecimals: MainnetAVAXToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "A5z6Fmd5oHJaehJrDcm7i1kNN8hz1NQLmqpaWoNtFspo"
-    ),
-    expectedApy: 29.1,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetAVAXToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetAVAXToken,
-    wormholeAsset: ASSET_AVAX,
-  }),
-  mainnet_income_call_ray: new SubvoltDef10({
-    globalId: "mainnet_income_call_ray",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.RAY,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R"),
-    voltVaultId: new PublicKey("4LtxyBUH8PsRea21s7CaaYWtq7KutcZ4x8r6PTmUCcvs"),
-    extraVaultDataId: new PublicKey(
-      "EhH6Vw3DwvGNPKYDDVgZAjP63dBXw8Eg3EHb1ixz8WpX"
-    ),
-    vaultAuthority: new PublicKey(
-      "A6XsYxGj9wpqUZG81XwgQJ2zJ3efCbuWSQfnkHqUSmdM"
-    ),
-    shareTokenDecimals: MainnetRAYToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "9XUVkBf8K38iXJPos77wsMnJoniX7YNH17Rbzw1qmh9K"
-    ),
-    expectedApy: 26.0,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetRAYToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetRAYToken,
-    abnormalEpochLength: 14,
-  }),
-  mainnet_income_call_sbr: new SubvoltDef10({
-    globalId: "mainnet_income_call_sbr",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.SBR,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("Saber2gLauYim4Mvftnrasomsv6NvAuncvMEZwcLpD1"),
-    voltVaultId: new PublicKey("5b2VBmdZAmnFpmWD6hi5xWFeaf4equVwNp25q1UWC9FP"),
-    extraVaultDataId: new PublicKey(
-      "FyxL7QKDXqcNgtVZ9uAXEvaQbz5t6cRLTsj4krmUYo6C"
-    ),
-    vaultAuthority: new PublicKey(
-      "BH7Jg3f97FyeGxsPR7FFskvfqGiaLeUnJ9Ksda53Jj8h"
-    ),
-    shareTokenDecimals: MainnetSBRToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "APRoymKQLaXf68LxzGAJTYR3VVe9nTXmDZKJWNfmabg2"
-    ),
-    expectedApy: 36.3,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetSBRToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetSBRToken,
-    abnormalEpochLength: 14,
-  }),
-  mainnet_income_call_mngo: new SubvoltDef10({
-    globalId: "mainnet_income_call_mngo",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.MNGO,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac"),
-    voltVaultId: new PublicKey("DxSADpEUR8xULRdWwb37pN8mjPHHC5D8aRnyUAvVSYHa"),
-    extraVaultDataId: new PublicKey(
-      "xwQiKPudYRonxSF6JUUfQHyhWXD2DUrME9cjiva6gd8"
-    ),
-    vaultAuthority: new PublicKey(
-      "B3yakZxwomkmnCxRr8ZmQtiWgtxtVBuCREDFDdAvcCVQ"
-    ),
-    shareTokenDecimals: MainnetMNGOToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "3zb9bvQ5jeY9wFyr9MSeNqkFf5Ch3DTvY49Q6476E4HF"
-    ),
-    expectedApy: 12.8,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetMNGOToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetMNGOToken,
-    abnormalEpochLength: 14,
-  }),
-  mainnet_income_put_mngo: new SubvoltDef10({
-    globalId: "mainnet_income_put_mngo",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.MNGO,
-    optionType: "put",
-    volt: 2,
-    mint: new PublicKey("MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac"),
-    voltVaultId: new PublicKey("9SPz2yjNc9V4FmdHrkYF1GfikGbe5rfwg6VPzhQJpPyt"),
-    extraVaultDataId: new PublicKey(
-      "DEg4dUewDBdgGDMGLt1XBsrucsUJSphGf5Rn4ezX3EtC"
-    ),
-    vaultAuthority: new PublicKey(
-      "CVrRw6VtxSjokm2tKmaS5RCuoc9EFjN4wEoov6f2PST6"
-    ),
-    shareTokenDecimals: MainnetUSDCToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "F7kZsKPJQAMT6BgruKfEU2jpu91Jj2iTjNeSpUZstMmd"
-    ),
-    expectedApy: 26.4,
-    shortDisplayDecimals: 2,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetMNGOToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetUSDCToken,
-    abnormalEpochLength: 14,
-  }),
-  mainnet_income_put_uxd: new SubvoltDef10({
-    globalId: "mainnet_income_put_uxd",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.UXD,
-    optionType: "put",
-    volt: 2,
-    mint: new PublicKey("7kbnvuGBxxj8AG9qp8Scn56muWGaRaFqxg1FsRp3PaFT"),
-    voltVaultId: new PublicKey("czeyfQ3tZdfnPwLeRMRCYVHNjhViBR1fUd7giLBNKHA"),
-    extraVaultDataId: new PublicKey(
-      "3jFRqBprZfo8ZmN2kHcCZYv2CQQzkD3oBLjWv6KdQGiV"
-    ),
-    vaultAuthority: new PublicKey(
-      "3f6W66hpeW7eLivRgVghFEqgz4NRngWravPh3maDanVb"
-    ),
-    shareTokenDecimals: MainnetUXDToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "Fze6inVkgQtJod6sPfhuTeG1GYAkdRCujjF7FxyYuywk"
-    ),
-    expectedApy: 25.6,
-    shortDisplayDecimals: 2,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetSOLToken,
-    quote: MainnetUSDCToken, // This is intentional. Please see "changed" 😂: https://github.com/Friktion-Labs/dapp/commit/7c82fb6702e0ef85ca0cc2947b65b040671ce62a
-    depositToken: MainnetUXDToken,
-    externalLink: "https://app.uxd.fi/",
-    shouldHideSwapTab: true,
-  }),
-  mainnet_income_call_samo: new SubvoltDef10({
-    globalId: "mainnet_income_call_samo",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.SAMO,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU"),
-    voltVaultId: new PublicKey("CMVV4kfSdJRufiTNrrhr6PsvYY8SFhNs3TVjsWS3rJvP"),
-    extraVaultDataId: new PublicKey(
-      "2BU1z1e1h3adbsLYpnARMa4JCsZYMhrFC16jGPqb9ZYq"
-    ),
-    vaultAuthority: new PublicKey(
-      "7zev38J4jebnpACswV8iqjhDK9jsC1MGHtuAE2SPvqeZ"
-    ),
-    shareTokenDecimals: MainnetSamoToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "E6LmqE7JS7dbFFpsYFrNx27xsBLTZQKFbEJTzo363Un2"
-    ),
-    expectedApy: 24.0,
-    shortDisplayDecimals: 2,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetSamoToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetSamoToken,
-    // abnormalEpochLength: 14,
-  }),
-  mainnet_income_call_near: new SubvoltDef10({
-    globalId: "mainnet_income_call_near",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.NEAR,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("BYPsjxa3YuZESQz1dKuBw1QSFCSpecsm8nCQhY5xbU1Z"),
-    voltVaultId: new PublicKey("7P7oU1dTxXVU1Pked1DnEnr4GrrQb549zMAY4VmjChDo"),
-    extraVaultDataId: new PublicKey(
-      "37tASwXheKJTLPD6HHLniT5GsU8e4v755mVox5faAn83"
-    ),
-    vaultAuthority: new PublicKey(
-      "8XfzVjDJU2ZekawjA7fhUHQt2KNGVYv8qq1AzuGZ7iyK"
-    ),
-    shareTokenDecimals: MainnetNearToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "77UaXUjEJ9GeWw2WNabymtZy7ezKmwGfCG8C7edsW7xD"
-    ),
-    expectedApy: 23.7,
-    shortDisplayDecimals: 2,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetNearToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetNearToken,
-    abnormalEpochLength: 28,
-  }),
-  mainnet_income_call_luna: new SubvoltDef10({
-    globalId: "mainnet_income_call_luna",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.LUNA,
-    optionType: "call",
-    volt: 1,
-    mint: new PublicKey("F6v4wfAdJB8D8p77bMXZgYt8TDKsYxLYxH5AFhUkYx9W"),
-    voltVaultId: new PublicKey("4jx7Fec8kmwvabqTYp9M7C2zPfhivFgiqqzajn9Ns2ba"),
-    extraVaultDataId: new PublicKey(
-      "DH6aU2HP6f7hhiamxWWB6kF52gARbMhE11jT6WCANc6K"
-    ),
-    vaultAuthority: new PublicKey(
-      "5oV1Yf8q1oQgPYuHjepjmKFuaG2Wng9dzTqbSWhU5W2X"
-    ),
-    shareTokenDecimals: MainnetLUNAToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "6oxqAenMejUcgcnY43L4PuBhKwjpMRESZyP2MpKQEedR"
-    ),
-    expectedApy: 12.0,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetLUNAToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetLUNAToken,
-  }),
-  mainnet_income_put_luna: new SubvoltDef10({
-    globalId: "mainnet_income_put_luna",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.LUNA,
-    optionType: "put",
-    volt: 2,
-    mint: new PublicKey("F6v4wfAdJB8D8p77bMXZgYt8TDKsYxLYxH5AFhUkYx9W"),
-    voltVaultId: new PublicKey("3aL9h1PVt2rbUPo11QZpRbpLJhWHrHCpizsirWhMXiXB"),
-    extraVaultDataId: new PublicKey(
-      "7a6MCYkAUb3iQU7hU8v5kfqkBpLGadGyuqUe64x5FMTC"
-    ),
-    vaultAuthority: new PublicKey(
-      "5kA7FPiB3t2X5s65dK1AoEu5asDjC5d7f5vaB4iY2yrj"
-    ),
-    shareTokenDecimals: MainnetUSTToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "F7kZsKPJQAMT6BgruKfEU2jpu91Jj2iTjNeSpUZstMmd"
-    ),
-    expectedApy: 12.0,
-    shortDisplayDecimals: 2,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetLUNAToken,
-    quote: MainnetUSTToken,
-    depositToken: MainnetUSTToken,
-  }),
-  mainnet_income_perp_btc: new SubvoltDef10({
-    globalId: "mainnet_income_perp_btc",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.BTC,
-    volt: 3,
-    mint: new PublicKey("9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E"),
-    voltVaultId: new PublicKey("JPmAHJBocDi1539s2wfqiGzVTZd4quYJgx5dg6Ysq2k"),
-    extraVaultDataId: new PublicKey(
-      "6b7YMVAkdx1mZqTGA4fpCHt3dRCcVLRd8N5oN8zk2ej2"
-    ),
-    vaultAuthority: new PublicKey(
-      "3A9M3rMmAg6SZmNgMuZ1sinriFaTdS9Fmj6c54w1vDG4"
-    ),
-    shareTokenDecimals: MainnetUSDCToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "52Uwi5LjZEox2h9jT3TfQemz15d887FQLbn69RR7hDgF"
-    ),
-    expectedApy: 19.5,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetBTCToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetUSDCToken,
-  }),
+  // mainnet_income_call_stsol: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_stsol",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.stSOL,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("7dHbWXmci3dT8UFYWYZweBLXgycu7Y3iL6trKn1Y7ARj"),
+  //   voltVaultId: new PublicKey("9q5kEMkY28NXjxovpr1ssLLCAHgmyYzNmgAksp6voeJ8"),
+  //   extraVaultDataId: new PublicKey(
+  //     "H5kRu6xZ2yZw86VuyfvkVbRq2Ac4LTM2arWLG3QKtC1o"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "2Ahpeqc1bo7Y4dVknvZUVfZPhHhym7JN6az2XMbUA6QA"
+  //   ),
+  //   shareTokenDecimals: MainnetLIDOSTSOLToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "CKxf35g1CDGSdF6uXFvxAzjEK7iy7G6PZQqcCJFCjqDm"
+  //   ),
+  //   expectedApy: 21.0,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetLIDOSTSOLToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetLIDOSTSOLToken,
+  //   doesHaveAutomatedEmissions: true,
+  // }),
+  // mainnet_income_call_socean: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_socean",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.scnSOL,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm"),
+  //   voltVaultId: new PublicKey("3ZYabzsHY2XGuVBBbAgrxitPhmHSKLDCKqEp3vpX9Jb1"),
+  //   extraVaultDataId: new PublicKey(
+  //     "5J3MHJAkHG3otVPhFAxgAcNV6cURk2CFyTLpHPKAbYeu"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "A5MpyajTy6hdsg3S2em5ukcgY1ZBhxTxEKv8BgHajv1A"
+  //   ),
+  //   shareTokenDecimals: MainnetSCNSOLToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "4ge6UnhomusubG4S5bYGBYk2JFskvQ9axLf9FB1fGpLY"
+  //   ),
+  //   expectedApy: 22.4,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetSCNSOLToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetSCNSOLToken,
+  // }),
+  // mainnet_income_call_btc: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_btc",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.BTC,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E"),
+  //   voltVaultId: new PublicKey("CdZ1Mgo3927bsYdKK5rnzGtwek3NLWdvoTSSm2TJjdqW"),
+  //   extraVaultDataId: new PublicKey(
+  //     "6MpBDp3TCFTYrokZaGSpm5k5Wq9GT1P3SKx15eMvtNnh"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "DA1M8mw7GnPNKU9ReANtHPQyuVzKZtsuuSbCyc2uX2du"
+  //   ),
+  //   shareTokenDecimals: MainnetBTCToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "2NksTwSCzD2XERcZN5FHgTWhCVPePWt59mBKmsKGhbhP"
+  //   ),
+  //   expectedApy: 16.6,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: 5.5,
+  //   fallbackGlobalDepositCap: 11,
+  //   underlying: MainnetBTCToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetBTCToken,
+  // }),
+  // mainnet_income_put_btc: new SubvoltDef10({
+  //   globalId: "mainnet_income_put_btc",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.BTC,
+  //   optionType: "put",
+  //   volt: 2,
+  //   mint: new PublicKey("9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E"),
+  //   voltVaultId: new PublicKey("CzFUVBXaAxWRQ3JeJwsZHqDQUxBbUJLZtdoBQ3KPtsuB"),
+  //   extraVaultDataId: new PublicKey(
+  //     "ByJbHcLvbgEAbo9sMetMFeZhHko6SNFR1vPX8FnEvYAu"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "GrB6vbG2WP7eEnbwgxUbBGRMeXYq139jo2o9oW8cNK8f"
+  //   ),
+  //   shareTokenDecimals: MainnetUSDCToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "52Uwi5LjZEox2h9jT3TfQemz15d887FQLbn69RR7hDgF"
+  //   ),
+  //   expectedApy: 23.7,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: 5.5,
+  //   fallbackGlobalDepositCap: 11,
+  //   underlying: MainnetBTCToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetUSDCToken,
+  // }),
+  // mainnet_income_call_srm: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_srm",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.SRM,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("SRMuApVNdxXokk5GT7XD5cUUgXMBCoAz2LHeuAoKWRt"),
+  //   voltVaultId: new PublicKey("Ef2CD9yhQE7BvReQXct68uuYFW8GLKj62u2YPfmua3JY"),
+  //   extraVaultDataId: new PublicKey(
+  //     "9e7XC1K2sPbDALCA7ZD8oxockHLe6KtXjEKhjEzqEGuj"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "2P427N5sYcEXvZAZwqNzjXEHsBMESQoLyjNquTSmGPMb"
+  //   ),
+  //   shareTokenDecimals: MainnetSRMToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "DaTyog7M78LnH69yowfVKRAnETPEeJPjyeh1BpKDuQeD"
+  //   ),
+  //   expectedApy: 25.9,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetSRMToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetSRMToken,
+  // }),
+  // mainnet_income_call_ftt: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_ftt",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.FTT,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("EzfgjvkSwthhgHaceR3LnKXUoRkP6NUhfghdaHAj1tUv"),
+  //   voltVaultId: new PublicKey("8qjBanq5cxc3FzsaEznKfpsbPwfMVoB6AxLXY7pe3fEX"),
+  //   extraVaultDataId: new PublicKey(
+  //     "ATkNEzFX7ZygpzGMLRphSgfiK512nBBZHcKjjJdFgMdq"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "7KqHFuUksvNhrWgoacKkqyp2RwfBNdypCYgK9nxD1d6K"
+  //   ),
+  //   shareTokenDecimals: 6,
+  //   spotSerumMarketId: new PublicKey(
+  //     "GWjUq2xcTVzaWbpJ3quTSeJnFbicWamcFZREyyNHCHJe"
+  //   ),
+  //   expectedApy: 21.3,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetFTTToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetFTTToken,
+  // }),
+  // mainnet_income_call_step: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_step",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.STEP,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("StepAscQoEioFxxWGnh2sLBDFp9d8rvKz2Yp39iDpyT"),
+  //   voltVaultId: new PublicKey("8YtJU58RUbvrdqCyTK7zJBSmCafVvZfysdXYq3W7YDai"),
+  //   extraVaultDataId: new PublicKey(
+  //     "6hSjQYdLAwVvBAnf9ye5XjbhDx8dky31BWr6jq34MAfu"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "FiEHDTKT6X7VFwGaUmsm1XXYr8vvkoSR5EqcY4znpefq"
+  //   ),
+  //   shareTokenDecimals: MainnetSTEPToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "Di8cexymBtunKZb8CQC9g6188k98NeZEhoscED9oExWM"
+  //   ),
+  //   expectedApy: 17.5,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetSTEPToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetSTEPToken,
+  // }),
+  // mainnet_income_call_avax: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_avax",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.AVAX,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("KgV1GvrHQmRBY8sHQQeUKwTm2r2h8t4C8qt12Cw1HVE"),
+  //   voltVaultId: new PublicKey("7mzbtntRJL7QPw2rtAcFhqVM7iBvCa6McaatZ5RPPhag"),
+  //   extraVaultDataId: new PublicKey(
+  //     "7MDpCGNLKJyUaXhbFe6WqkQHvLKELLwibYj1H5FknkmA"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "5LrULR5w9N1dfnJ9vHnzRkQi9uBL3CkSRWkDGTG6dP1e"
+  //   ),
+  //   shareTokenDecimals: MainnetAVAXToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "A5z6Fmd5oHJaehJrDcm7i1kNN8hz1NQLmqpaWoNtFspo"
+  //   ),
+  //   expectedApy: 29.1,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetAVAXToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetAVAXToken,
+  //   wormholeAsset: ASSET_AVAX,
+  // }),
+  // mainnet_income_call_ray: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_ray",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.RAY,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R"),
+  //   voltVaultId: new PublicKey("4LtxyBUH8PsRea21s7CaaYWtq7KutcZ4x8r6PTmUCcvs"),
+  //   extraVaultDataId: new PublicKey(
+  //     "EhH6Vw3DwvGNPKYDDVgZAjP63dBXw8Eg3EHb1ixz8WpX"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "A6XsYxGj9wpqUZG81XwgQJ2zJ3efCbuWSQfnkHqUSmdM"
+  //   ),
+  //   shareTokenDecimals: MainnetRAYToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "9XUVkBf8K38iXJPos77wsMnJoniX7YNH17Rbzw1qmh9K"
+  //   ),
+  //   expectedApy: 26.0,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetRAYToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetRAYToken,
+  //   abnormalEpochLength: 14,
+  // }),
+  // mainnet_income_call_sbr: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_sbr",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.SBR,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("Saber2gLauYim4Mvftnrasomsv6NvAuncvMEZwcLpD1"),
+  //   voltVaultId: new PublicKey("5b2VBmdZAmnFpmWD6hi5xWFeaf4equVwNp25q1UWC9FP"),
+  //   extraVaultDataId: new PublicKey(
+  //     "FyxL7QKDXqcNgtVZ9uAXEvaQbz5t6cRLTsj4krmUYo6C"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "BH7Jg3f97FyeGxsPR7FFskvfqGiaLeUnJ9Ksda53Jj8h"
+  //   ),
+  //   shareTokenDecimals: MainnetSBRToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "APRoymKQLaXf68LxzGAJTYR3VVe9nTXmDZKJWNfmabg2"
+  //   ),
+  //   expectedApy: 36.3,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetSBRToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetSBRToken,
+  //   abnormalEpochLength: 14,
+  // }),
+  // mainnet_income_call_mngo: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_mngo",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.MNGO,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac"),
+  //   voltVaultId: new PublicKey("DxSADpEUR8xULRdWwb37pN8mjPHHC5D8aRnyUAvVSYHa"),
+  //   extraVaultDataId: new PublicKey(
+  //     "xwQiKPudYRonxSF6JUUfQHyhWXD2DUrME9cjiva6gd8"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "B3yakZxwomkmnCxRr8ZmQtiWgtxtVBuCREDFDdAvcCVQ"
+  //   ),
+  //   shareTokenDecimals: MainnetMNGOToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "3zb9bvQ5jeY9wFyr9MSeNqkFf5Ch3DTvY49Q6476E4HF"
+  //   ),
+  //   expectedApy: 12.8,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetMNGOToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetMNGOToken,
+  //   abnormalEpochLength: 14,
+  // }),
+  // mainnet_income_put_mngo: new SubvoltDef10({
+  //   globalId: "mainnet_income_put_mngo",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.MNGO,
+  //   optionType: "put",
+  //   volt: 2,
+  //   mint: new PublicKey("MangoCzJ36AjZyKwVj3VnYU4GTonjfVEnJmvvWaxLac"),
+  //   voltVaultId: new PublicKey("9SPz2yjNc9V4FmdHrkYF1GfikGbe5rfwg6VPzhQJpPyt"),
+  //   extraVaultDataId: new PublicKey(
+  //     "DEg4dUewDBdgGDMGLt1XBsrucsUJSphGf5Rn4ezX3EtC"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "CVrRw6VtxSjokm2tKmaS5RCuoc9EFjN4wEoov6f2PST6"
+  //   ),
+  //   shareTokenDecimals: MainnetUSDCToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "F7kZsKPJQAMT6BgruKfEU2jpu91Jj2iTjNeSpUZstMmd"
+  //   ),
+  //   expectedApy: 26.4,
+  //   shortDisplayDecimals: 2,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetMNGOToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetUSDCToken,
+  //   abnormalEpochLength: 14,
+  // }),
+  // mainnet_income_put_uxd: new SubvoltDef10({
+  //   globalId: "mainnet_income_put_uxd",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.UXD,
+  //   optionType: "put",
+  //   volt: 2,
+  //   mint: new PublicKey("7kbnvuGBxxj8AG9qp8Scn56muWGaRaFqxg1FsRp3PaFT"),
+  //   voltVaultId: new PublicKey("czeyfQ3tZdfnPwLeRMRCYVHNjhViBR1fUd7giLBNKHA"),
+  //   extraVaultDataId: new PublicKey(
+  //     "3jFRqBprZfo8ZmN2kHcCZYv2CQQzkD3oBLjWv6KdQGiV"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "3f6W66hpeW7eLivRgVghFEqgz4NRngWravPh3maDanVb"
+  //   ),
+  //   shareTokenDecimals: MainnetUXDToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "Fze6inVkgQtJod6sPfhuTeG1GYAkdRCujjF7FxyYuywk"
+  //   ),
+  //   expectedApy: 25.6,
+  //   shortDisplayDecimals: 2,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetSOLToken,
+  //   quote: MainnetUSDCToken, // This is intentional. Please see "changed" 😂: https://github.com/Friktion-Labs/dapp/commit/7c82fb6702e0ef85ca0cc2947b65b040671ce62a
+  //   depositToken: MainnetUXDToken,
+  //   externalLink: "https://app.uxd.fi/",
+  //   shouldHideSwapTab: true,
+  // }),
+  // mainnet_income_call_samo: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_samo",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.SAMO,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU"),
+  //   voltVaultId: new PublicKey("CMVV4kfSdJRufiTNrrhr6PsvYY8SFhNs3TVjsWS3rJvP"),
+  //   extraVaultDataId: new PublicKey(
+  //     "2BU1z1e1h3adbsLYpnARMa4JCsZYMhrFC16jGPqb9ZYq"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "7zev38J4jebnpACswV8iqjhDK9jsC1MGHtuAE2SPvqeZ"
+  //   ),
+  //   shareTokenDecimals: MainnetSamoToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "E6LmqE7JS7dbFFpsYFrNx27xsBLTZQKFbEJTzo363Un2"
+  //   ),
+  //   expectedApy: 24.0,
+  //   shortDisplayDecimals: 2,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetSamoToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetSamoToken,
+  //   // abnormalEpochLength: 14,
+  // }),
+  // mainnet_income_call_near: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_near",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.NEAR,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("BYPsjxa3YuZESQz1dKuBw1QSFCSpecsm8nCQhY5xbU1Z"),
+  //   voltVaultId: new PublicKey("7P7oU1dTxXVU1Pked1DnEnr4GrrQb549zMAY4VmjChDo"),
+  //   extraVaultDataId: new PublicKey(
+  //     "37tASwXheKJTLPD6HHLniT5GsU8e4v755mVox5faAn83"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "8XfzVjDJU2ZekawjA7fhUHQt2KNGVYv8qq1AzuGZ7iyK"
+  //   ),
+  //   shareTokenDecimals: MainnetNearToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "77UaXUjEJ9GeWw2WNabymtZy7ezKmwGfCG8C7edsW7xD"
+  //   ),
+  //   expectedApy: 23.7,
+  //   shortDisplayDecimals: 2,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetNearToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetNearToken,
+  //   abnormalEpochLength: 28,
+  // }),
+  // mainnet_income_call_luna: new SubvoltDef10({
+  //   globalId: "mainnet_income_call_luna",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.LUNA,
+  //   optionType: "call",
+  //   volt: 1,
+  //   mint: new PublicKey("F6v4wfAdJB8D8p77bMXZgYt8TDKsYxLYxH5AFhUkYx9W"),
+  //   voltVaultId: new PublicKey("4jx7Fec8kmwvabqTYp9M7C2zPfhivFgiqqzajn9Ns2ba"),
+  //   extraVaultDataId: new PublicKey(
+  //     "DH6aU2HP6f7hhiamxWWB6kF52gARbMhE11jT6WCANc6K"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "5oV1Yf8q1oQgPYuHjepjmKFuaG2Wng9dzTqbSWhU5W2X"
+  //   ),
+  //   shareTokenDecimals: MainnetLUNAToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "6oxqAenMejUcgcnY43L4PuBhKwjpMRESZyP2MpKQEedR"
+  //   ),
+  //   expectedApy: 12.0,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetLUNAToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetLUNAToken,
+  // }),
+  // mainnet_income_put_luna: new SubvoltDef10({
+  //   globalId: "mainnet_income_put_luna",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.LUNA,
+  //   optionType: "put",
+  //   volt: 2,
+  //   mint: new PublicKey("F6v4wfAdJB8D8p77bMXZgYt8TDKsYxLYxH5AFhUkYx9W"),
+  //   voltVaultId: new PublicKey("3aL9h1PVt2rbUPo11QZpRbpLJhWHrHCpizsirWhMXiXB"),
+  //   extraVaultDataId: new PublicKey(
+  //     "7a6MCYkAUb3iQU7hU8v5kfqkBpLGadGyuqUe64x5FMTC"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "5kA7FPiB3t2X5s65dK1AoEu5asDjC5d7f5vaB4iY2yrj"
+  //   ),
+  //   shareTokenDecimals: MainnetUSTToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "F7kZsKPJQAMT6BgruKfEU2jpu91Jj2iTjNeSpUZstMmd"
+  //   ),
+  //   expectedApy: 12.0,
+  //   shortDisplayDecimals: 2,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetLUNAToken,
+  //   quote: MainnetUSTToken,
+  //   depositToken: MainnetUSTToken,
+  // }),
+  // mainnet_income_perp_btc: new SubvoltDef10({
+  //   globalId: "mainnet_income_perp_btc",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.BTC,
+  //   volt: 3,
+  //   mint: new PublicKey("9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E"),
+  //   voltVaultId: new PublicKey("JPmAHJBocDi1539s2wfqiGzVTZd4quYJgx5dg6Ysq2k"),
+  //   extraVaultDataId: new PublicKey(
+  //     "6b7YMVAkdx1mZqTGA4fpCHt3dRCcVLRd8N5oN8zk2ej2"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "3A9M3rMmAg6SZmNgMuZ1sinriFaTdS9Fmj6c54w1vDG4"
+  //   ),
+  //   shareTokenDecimals: MainnetUSDCToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "52Uwi5LjZEox2h9jT3TfQemz15d887FQLbn69RR7hDgF"
+  //   ),
+  //   expectedApy: 19.5,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetBTCToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetUSDCToken,
+  // }),
   mainnet_basis_usdc_sol: new SubvoltDef10({
     globalId: "mainnet_basis_usdc_sol",
     network: "mainnet-beta",
@@ -1842,31 +1842,31 @@ const INTERNAL_SPECIFICALLY_TYPED_SUBVOLT_INFO = {
     quote: MainnetUSDCToken,
     depositToken: MainnetUSDCToken,
   }),
-  mainnet_basis_usdc_btc: new SubvoltDef10({
-    globalId: "mainnet_basis_usdc_btc",
-    network: "mainnet-beta",
-    iconLink: ImportantAssetLogos.BTC,
-    volt: 4,
-    mint: new PublicKey("9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E"),
-    voltVaultId: new PublicKey("5UothAuhBvRgmR3pEEppLUFoCexcuDshgbS1fb1Ad5WR"),
-    extraVaultDataId: new PublicKey(
-      "8s9pomGR273mSmcWFf9nWqh2mzrfEcGNnR79NXWHgbvY"
-    ),
-    vaultAuthority: new PublicKey(
-      "Epomtk2m1vF6J74wXxYjRmkZPismCAtriCUxBSR3D1AV"
-    ),
-    shareTokenDecimals: MainnetUSDCToken.decimals,
-    spotSerumMarketId: new PublicKey(
-      "52Uwi5LjZEox2h9jT3TfQemz15d887FQLbn69RR7hDgF"
-    ),
-    expectedApy: 3.9,
-    shortDisplayDecimals: 4,
-    fallbackIndividualDepositCap: -1,
-    fallbackGlobalDepositCap: -1,
-    underlying: MainnetBTCToken,
-    quote: MainnetUSDCToken,
-    depositToken: MainnetUSDCToken,
-  }),
+  // mainnet_basis_usdc_btc: new SubvoltDef10({
+  //   globalId: "mainnet_basis_usdc_btc",
+  //   network: "mainnet-beta",
+  //   iconLink: ImportantAssetLogos.BTC,
+  //   volt: 4,
+  //   mint: new PublicKey("9n4nbM75f5Ui33ZbPYXn59EwSgE8CGsHtAeTH5YFeJ9E"),
+  //   voltVaultId: new PublicKey("5UothAuhBvRgmR3pEEppLUFoCexcuDshgbS1fb1Ad5WR"),
+  //   extraVaultDataId: new PublicKey(
+  //     "8s9pomGR273mSmcWFf9nWqh2mzrfEcGNnR79NXWHgbvY"
+  //   ),
+  //   vaultAuthority: new PublicKey(
+  //     "Epomtk2m1vF6J74wXxYjRmkZPismCAtriCUxBSR3D1AV"
+  //   ),
+  //   shareTokenDecimals: MainnetUSDCToken.decimals,
+  //   spotSerumMarketId: new PublicKey(
+  //     "52Uwi5LjZEox2h9jT3TfQemz15d887FQLbn69RR7hDgF"
+  //   ),
+  //   expectedApy: 3.9,
+  //   shortDisplayDecimals: 4,
+  //   fallbackIndividualDepositCap: -1,
+  //   fallbackGlobalDepositCap: -1,
+  //   underlying: MainnetBTCToken,
+  //   quote: MainnetUSDCToken,
+  //   depositToken: MainnetUSDCToken,
+  // }),
   mainnet_protection_usdc_sol: new SubvoltDef10({
     globalId: "mainnet_protection_usdc_sol",
     network: "mainnet-beta",
@@ -1983,35 +1983,35 @@ export const SUBVOLT_LIST: Record<
     STRONG_SUBVOLTS["devnet_income_perp_btc"],
   ],
   "mainnet-beta": [
-    STRONG_SUBVOLTS["mainnet_income_call_btc"],
+    // STRONG_SUBVOLTS["mainnet_income_call_btc"],
     STRONG_SUBVOLTS["mainnet_income_call_sol"],
     STRONG_SUBVOLTS["mainnet_income_call_sol_high"],
     STRONG_SUBVOLTS["mainnet_income_call_marinade"],
-    STRONG_SUBVOLTS["mainnet_income_call_samo"],
-    STRONG_SUBVOLTS["mainnet_income_call_near"],
-    STRONG_SUBVOLTS["mainnet_income_call_eth"],
-    STRONG_SUBVOLTS["mainnet_income_call_ftt"],
-    STRONG_SUBVOLTS["mainnet_income_call_srm"],
-    STRONG_SUBVOLTS["mainnet_income_call_mngo"],
-    STRONG_SUBVOLTS["mainnet_income_call_socean"],
-    STRONG_SUBVOLTS["mainnet_income_call_sbr"],
-    STRONG_SUBVOLTS["mainnet_income_call_luna"],
-    STRONG_SUBVOLTS["mainnet_income_call_ray"],
-    STRONG_SUBVOLTS["mainnet_income_call_step"],
-    STRONG_SUBVOLTS["mainnet_income_call_stsol"],
-    STRONG_SUBVOLTS["mainnet_income_call_avax"],
-    STRONG_SUBVOLTS["mainnet_income_put_luna"],
+    // STRONG_SUBVOLTS["mainnet_income_call_samo"],
+    // STRONG_SUBVOLTS["mainnet_income_call_near"],
+    // STRONG_SUBVOLTS["mainnet_income_call_eth"],
+    // STRONG_SUBVOLTS["mainnet_income_call_ftt"],
+    // STRONG_SUBVOLTS["mainnet_income_call_srm"],
+    // STRONG_SUBVOLTS["mainnet_income_call_mngo"],
+    // STRONG_SUBVOLTS["mainnet_income_call_socean"],
+    // STRONG_SUBVOLTS["mainnet_income_call_sbr"],
+    // STRONG_SUBVOLTS["mainnet_income_call_luna"],
+    // STRONG_SUBVOLTS["mainnet_income_call_ray"],
+    // STRONG_SUBVOLTS["mainnet_income_call_step"],
+    // STRONG_SUBVOLTS["mainnet_income_call_stsol"],
+    // STRONG_SUBVOLTS["mainnet_income_call_avax"],
+    // STRONG_SUBVOLTS["mainnet_income_put_luna"],
     STRONG_SUBVOLTS["mainnet_income_put_sol"],
-    STRONG_SUBVOLTS["mainnet_income_put_sol_high"],
-    STRONG_SUBVOLTS["mainnet_income_put_mngo"],
-    STRONG_SUBVOLTS["mainnet_income_put_btc"],
-    STRONG_SUBVOLTS["mainnet_income_put_tsUSDC"],
-    STRONG_SUBVOLTS["mainnet_income_put_pai"],
-    STRONG_SUBVOLTS["mainnet_income_put_uxd"],
-    STRONG_SUBVOLTS["mainnet_income_put_eth"],
-    STRONG_SUBVOLTS["mainnet_income_perp_btc"],
+    // STRONG_SUBVOLTS["mainnet_income_put_sol_high"],
+    // STRONG_SUBVOLTS["mainnet_income_put_mngo"],
+    // STRONG_SUBVOLTS["mainnet_income_put_btc"],
+    // STRONG_SUBVOLTS["mainnet_income_put_tsUSDC"],
+    // STRONG_SUBVOLTS["mainnet_income_put_pai"],
+    // STRONG_SUBVOLTS["mainnet_income_put_uxd"],
+    // STRONG_SUBVOLTS["mainnet_income_put_eth"],
+    // STRONG_SUBVOLTS["mainnet_income_perp_btc"],
     STRONG_SUBVOLTS["mainnet_basis_usdc_sol"],
-    STRONG_SUBVOLTS["mainnet_basis_usdc_btc"],
+    // STRONG_SUBVOLTS["mainnet_basis_usdc_btc"],
     STRONG_SUBVOLTS["mainnet_protection_usdc_sol"],
   ],
   testnet: [],

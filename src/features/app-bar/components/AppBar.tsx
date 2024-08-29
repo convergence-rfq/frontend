@@ -8,7 +8,7 @@ import { DialectNotificationsButton } from "./DialectNotificationsButton";
 import { HeaderWallet } from "./HeaderWallet";
 import { AppBarButton } from "./AppBarButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { FriktionTitle } from "./FriktionTitle";
+// import { FriktionTitle } from "./FriktionTitle";
 // import { ColorModeToggleButton } from "./ColorModeToggleButton";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useRouteMatch } from "common/hooks/useRouteMatch";
@@ -16,7 +16,7 @@ import { CollapsedTabContent } from "../types/CollapsedTabContent";
 import { AppBarItems, AppBarItem } from "./app-bar-items";
 import { appBarMenuLinkStyle, SocialLinks } from "./MenuLinks";
 import { useScrollPosition } from "hooks/useScrollPosition";
-import { FriktionBolt } from "features/icons";
+import { LDotFun } from "features/icons";
 
 export const APP_BAR_HEIGHT = 70;
 export const APP_BAR_MARGIN_BOTTOM = 10;
@@ -116,12 +116,8 @@ export const AppBar = ({
     <AppBarContainer scroll={scrollPosition}>
       <HeaderLogo className="headerLogo">
         <Link to="/">
-          <FriktionBolt
-            width="28"
-            height="28"
-            color={theme.palette.pink[600]}
-          />
-          <FriktionTitle height="18" />
+          <LDotFun width="28" height="28" color={theme.palette.pink[600]} />
+          {/* <FriktionTitle height="18" /> */}
         </Link>
       </HeaderLogo>
       <AppBarItems

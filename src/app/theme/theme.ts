@@ -23,6 +23,12 @@ export const getTheme = (mode: PaletteMode) =>
         radial:
           "radial-gradient(100% 136.81% at 0% 0%,#383c8b 0%,#3067f4 28.12%,#f077d8 92.2%,#dbb4d3 147.66%)",
       },
+      ldotfun: {
+        linear:
+          "linear-gradient(90deg, rgba(163,255,0,1) 0%, rgba(0,255,154,1) 100%)",
+        radial:
+          "radial-gradient(circle, rgba(163,255,0,1) 0%, rgba(0,255,154,1) 100%)",
+      },
       volt1:
         "linear-gradient(30deg, hsl(255, 76%, 58%) 5%, hsl(194, 75%, 52%) 100%)",
       volt2:
@@ -61,6 +67,18 @@ export const getTheme = (mode: PaletteMode) =>
         800: "#82258B",
         900: "#621673",
         1000: "#491056",
+      },
+      green: {
+        50: "#F0FAF4",
+        100: "#E1F5E9",
+        200: "#C0E9D5",
+        300: "#9CDBBF",
+        400: "#7ACFAE",
+        500: "#A3FF00",
+        600: "#3EB55D",
+        700: "#2E9444",
+        800: "#1F732B",
+        900: "#145D1B",
       },
       electricity: {
         50: "#EAFDF9",

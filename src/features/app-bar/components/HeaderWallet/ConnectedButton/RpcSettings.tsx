@@ -160,7 +160,7 @@ export function RpcSettings({
         />
       )}
       <AppButton
-        color={theme.palette.friktion.linear}
+        color={theme.palette.ldotfun.linear}
         css={css`
           width: 100%;
           margin-top: 8px;

@@ -35,6 +35,7 @@ declare module "@mui/material/styles" {
   interface Palette {
     border: string;
     friktion: { linear: string; radial: string };
+    ldotfun: { linear: string; radial: string };
     solana: string;
     volt1: string;
     volt2: string;
@@ -44,6 +45,7 @@ declare module "@mui/material/styles" {
     darkBlue: Color;
     blue: Color;
     pink: Color;
+    green: Color;
     electricity: Color;
     sky: Color;
     neon: Color;
@@ -72,6 +74,7 @@ declare module "@mui/material/styles" {
   interface PaletteOptions {
     border?: string;
     friktion?: Partial<{ linear: string; radial: string }>;
+    ldotfun?: Partial<{ linear: string; radial: string }>;
     solana?: string;
     volt1?: string;
     volt2?: string;
@@ -81,6 +84,7 @@ declare module "@mui/material/styles" {
     darkBlue?: Partial<Color>;
     blue?: Partial<Color>;
     pink?: Partial<Color>;
+    green?: Partial<Color>;
     electricity?: Partial<Color>;
     sky?: Partial<Color>;
     neon?: Partial<Color>;

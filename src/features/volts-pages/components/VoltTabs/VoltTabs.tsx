@@ -39,7 +39,7 @@ const VoltTabsInner = ({ forwardedRef, ...rest }: VoltTabsInnerProps) => {
       <VoltTab voltNumber={1} value="/income" to="/income">
         Generate Income
       </VoltTab>
-      <VoltTab voltNumber={2} value="/stables" to="/stables">
+      {/* <VoltTab voltNumber={2} value="/stables" to="/stables">
         Sustainable Stables
       </VoltTab>
       <VoltTab voltNumber={3} value="/crab" to="/crab">
@@ -50,7 +50,7 @@ const VoltTabsInner = ({ forwardedRef, ...rest }: VoltTabsInnerProps) => {
       </VoltTab>
       <VoltTab voltNumber={5} value="/protection" to="/protection">
         Capital Protection
-      </VoltTab>
+      </VoltTab> */}
     </Tabs>
   );
 };

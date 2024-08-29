@@ -129,7 +129,7 @@ export const Card10 = (props: Card09Props) => {
     {
       staleTime: Infinity,
       retry: 3,
-      enabled: def?.globalId === "mainnet_income_call_stsol",
+      // enabled: def?.globalId === "mainnet_income_call_stsol",
     }
   );
   let additionalRewardsApy: string | null = null;
@@ -139,7 +139,8 @@ export const Card10 = (props: Card09Props) => {
     additionalRewardsApy = "...%";
     if (
       lidoRewardsApyQuery.data &&
-      def?.globalId === "mainnet_income_call_stsol"
+      true
+      // def?.globalId === "mainnet_income_call_stsol"
     ) {
       additionalRewardsApy = `${lidoRewardsApyQuery.data.apy.toFixed(1)}%`;
       additionalRewards = lidoRewardsApyQuery.data.apy;
@@ -229,25 +230,27 @@ export const Card10 = (props: Card09Props) => {
                     max-width: 240px;
                   `}
                 >
-                  {def.globalId === "mainnet_income_call_stsol" ? (
-                    <span>
-                      <span
-                        css={css`
-                          font-weight: 600;
-                        `}
-                      >
-                        Automatically
-                      </span>{" "}
-                      earn extra rewards from depositing into this stSOL volt.
-                      You will receive LDO rewards monthly.
-                    </span>
-                  ) : (
-                    <span>
-                      Earn extra rewards from depositing into this{" "}
-                      {def.depositToken.symbol} volt and staking the{" "}
-                      {def.shareTokenSymbol} you receive!
-                    </span>
-                  )}
+                  {
+                    /*def.globalId === "mainnet_income_call_stsol"*/ false ? (
+                      <span>
+                        <span
+                          css={css`
+                            font-weight: 600;
+                          `}
+                        >
+                          Automatically
+                        </span>{" "}
+                        earn extra rewards from depositing into this stSOL volt.
+                        You will receive LDO rewards monthly.
+                      </span>
+                    ) : (
+                      <span>
+                        Earn extra rewards from depositing into this{" "}
+                        {def.depositToken.symbol} volt and staking the{" "}
+                        {def.shareTokenSymbol} you receive!
+                      </span>
+                    )
+                  }
                 </div>
               }
             >
@@ -887,8 +890,9 @@ export const Card10 = (props: Card09Props) => {
                 ${props.underlyingAssetSymbol.length > 5
                   ? "font-size: 18px;"
                   : ""}
-                ${def?.globalId === "mainnet_income_call_stsol"
-                  ? "width: 100%;top: 3px;"
+                ${false
+                  ? // ${def?.globalId === "mainnet_income_call_stsol"
+                    "width: 100%;top: 3px;"
                   : ""}
               `}
               style={{
@@ -896,74 +900,77 @@ export const Card10 = (props: Card09Props) => {
                 left:
                   def?.volt !== 1
                     ? "20px"
-                    : def?.globalId === "mainnet_income_call_stsol"
-                    ? "14px"
+                    : false
+                    ? // : def?.globalId === "mainnet_income_call_stsol"
+                      "14px"
                     : "12px",
               }}
             >
-              {def?.globalId === "mainnet_income_call_stsol" ? (
-                <Popover
-                  destroyTooltipOnHide
-                  placement="bottom"
-                  content={
+              {
+                /*def?.globalId === "mainnet_income_call_stsol" */ false ? (
+                  <Popover
+                    destroyTooltipOnHide
+                    placement="bottom"
+                    content={
+                      <div
+                        css={css`
+                          max-width: 240px;
+                        `}
+                      >
+                        <span>
+                          Don't have stSOL? Create some with SOL and deposit in
+                          1 step by{" "}
+                          <span
+                            onClick={props.onClick}
+                            css={css`
+                              font-weight: 500;
+                              color: #ff00a8;
+                              cursor: pointer;
+                            `}
+                          >
+                            clicking on this card
+                          </span>
+                          !
+                        </span>
+                      </div>
+                    }
+                  >
                     <div
                       css={css`
-                        max-width: 240px;
+                        pointer-events: auto;
+                        display: flex;
+                        align-items: center;
                       `}
                     >
-                      <span>
-                        Don't have stSOL? Create some with SOL and deposit in 1
-                        step by{" "}
-                        <span
-                          onClick={props.onClick}
-                          css={css`
-                            font-weight: 500;
-                            color: #ff00a8;
-                            cursor: pointer;
-                          `}
-                        >
-                          clicking on this card
-                        </span>
-                        !
-                      </span>
+                      stSOL
+                      <div
+                        css={css`
+                          width: 1px;
+                          height: 30px;
+                          margin: 0 7px;
+                          background: #74747d;
+                        `}
+                      />
+                      SOL
+                      <span
+                        className="hoverShow"
+                        css={css`
+                          &:after {
+                            display: inline-block;
+                            content: "ⓘ";
+                            font-size: 12px;
+                            font-weight: bold;
+                            margin-left: 5px;
+                            margin-bottom: 2px;
+                          }
+                        `}
+                      ></span>
                     </div>
-                  }
-                >
-                  <div
-                    css={css`
-                      pointer-events: auto;
-                      display: flex;
-                      align-items: center;
-                    `}
-                  >
-                    stSOL
-                    <div
-                      css={css`
-                        width: 1px;
-                        height: 30px;
-                        margin: 0 7px;
-                        background: #74747d;
-                      `}
-                    />
-                    SOL
-                    <span
-                      className="hoverShow"
-                      css={css`
-                        &:after {
-                          display: inline-block;
-                          content: "ⓘ";
-                          font-size: 12px;
-                          font-weight: bold;
-                          margin-left: 5px;
-                          margin-bottom: 2px;
-                        }
-                      `}
-                    ></span>
-                  </div>
-                </Popover>
-              ) : (
-                props.underlyingAssetSymbol
-              )}
+                  </Popover>
+                ) : (
+                  props.underlyingAssetSymbol
+                )
+              }
             </CardAssetName>
           </CardAssetLogo>
 

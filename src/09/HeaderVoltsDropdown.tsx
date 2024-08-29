@@ -10,9 +10,9 @@ import {
   AlanGreenSpan,
   BlueSpan,
   VerticalBlueBar,
-  VerticalGreenBar,
-  VerticalVioletBar,
-  VerticalYellowBar,
+  // VerticalGreenBar,
+  // VerticalVioletBar,
+  // VerticalYellowBar,
   VioletSpan,
   YellowSpan,
 } from "./glow09";
@@ -27,13 +27,13 @@ import {
 import { AutoUniversalAssetLogo } from "./UniversalAssetLogo";
 import { useSubvoltLoader } from "./SubvoltLoader10";
 import { apyFromData } from "./YieldTooltip";
-import { VerticalPinkBar, PinkSpan } from "./glow09";
+import { /*VerticalPinkBar,*/ PinkSpan } from "./glow09";
 import ClickAwayListener from "@mui/base/ClickAwayListener";
 import volt1Icon from "./voltPics/Volt1Icon.png";
-import volt2Icon from "./voltPics/Volt2Icon.png";
-import volt3Icon from "./voltPics/Volt3Icon.png";
-import volt4Icon from "./voltPics/Volt4Icon.png";
-import volt5Icon from "./voltPics/Volt5Icon.png";
+// import volt2Icon from "./voltPics/Volt2Icon.png";
+// import volt3Icon from "./voltPics/Volt3Icon.png";
+// import volt4Icon from "./voltPics/Volt4Icon.png";
+// import volt5Icon from "./voltPics/Volt5Icon.png";
 import { ButtonLink09 } from "./Button09";
 import { useAuctionResults } from "./AuctionResults";
 
@@ -393,7 +393,7 @@ export const VoltsDropdown: React.FC<{
                 </IconAndTitleRow>
               </VoltsDropdownTabContent>
             </Link>
-            <Link
+            {/* <Link
               onClick={() => {
                 hide();
               }}
@@ -500,7 +500,7 @@ export const VoltsDropdown: React.FC<{
                   </TitleAndDesc>
                 </IconAndTitleRow>
               </VoltsDropdownTabContent>
-            </Link>
+            </Link> */}
           </VoltsDropdownVoltTabs>
           <ExploreButtonLinkContainer>
             <ButtonLink09

@@ -6,7 +6,8 @@ export const Ellipse = styled.div`
   border-radius: 50%;
   background: ${({ theme }) => `linear-gradient(
   90.31deg,
-  rgba(54, 121, 247, ${theme.palette.mode === "dark" ? "0.2" : "0.13"}) -2.65%,
-  rgba(219, 115, 222, ${theme.palette.mode === "dark" ? "0.2" : "0.13"}) 98.9%
+  rgba(46, 73, 0, ${theme.palette.mode === "dark" ? "0.2" : "0.13"}) -2.65%,
+  rgba(163, 255, 0, ${theme.palette.mode === "dark" ? "0.2" : "0.13"}) 98.9%,
+  rgba(0, 255, 154, ${theme.palette.mode === "dark" ? "0.2" : "0.13"}) 100%
 )`};
 `;
