@@ -217,7 +217,7 @@ export const AppBar = ({
           )}
         </AppBarItem>
 
-        <AppBarItem
+        {/* <AppBarItem
           collapsedContent={
             <Link css={appBarMenuLinkStyle} to="/analytics">
               Analytics
@@ -235,9 +235,9 @@ export const AppBar = ({
           >
             Analytics
           </Link>
-        </AppBarItem>
+        </AppBarItem> */}
 
-        <AppBarItem
+        {/* <AppBarItem
           collapsedContent={
             <Link css={appBarMenuLinkStyle} to="/portfolio">
               Portfolio
@@ -255,9 +255,9 @@ export const AppBar = ({
           >
             Portfolio
           </Link>
-        </AppBarItem>
+        </AppBarItem> */}
 
-        <AppBarItem
+        {/* <AppBarItem
           collapsedContent={
             <Link css={appBarMenuLinkStyle} to="/circuits">
               Circuits
@@ -275,13 +275,13 @@ export const AppBar = ({
           >
             Circuits
           </Link>
-        </AppBarItem>
+        </AppBarItem> */}
 
         <AppBarItem
           collapsedContent={
             <a
               css={appBarMenuLinkStyle}
-              href="https://docs.friktion.finance/"
+              href="https://docs.convergence.so/"
               target="_blank"
               rel="noreferrer"
             >
@@ -290,7 +290,7 @@ export const AppBar = ({
           }
         >
           <a
-            href="https://docs.friktion.finance/"
+            href="https://docs.convergence.so/"
             target="_blank"
             rel="noreferrer"
           >

@@ -21,7 +21,7 @@ export const appBarMenuLinkStyle = (theme: Theme) => css`
 export const SocialLinks = ({ close }: { close: () => void }) => (
   <>
     <a
-      href="https://twitter.com/friktion_labs"
+      href="https://twitter.com/convergencerfq"
       target="_blank"
       rel="noreferrer"
       css={(theme) => appBarMenuLinkStyle(theme)}
@@ -32,7 +32,7 @@ export const SocialLinks = ({ close }: { close: () => void }) => (
       Twitter
     </a>
     <a
-      href="https://discord.com/invite/eSkK9X67Qj"
+      href="https://discord.gg/XPCHK98p33"
       target="_blank"
       rel="noreferrer"
       css={(theme) => appBarMenuLinkStyle(theme)}
@@ -43,7 +43,7 @@ export const SocialLinks = ({ close }: { close: () => void }) => (
       Discord
     </a>
     <a
-      href="https://forum.friktion.fi/"
+      href="https://t.me/convergence_rfq"
       target="_blank"
       rel="noreferrer"
       css={(theme) => appBarMenuLinkStyle(theme)}
@@ -54,7 +54,7 @@ export const SocialLinks = ({ close }: { close: () => void }) => (
       Forum
     </a>
     <a
-      href="https://friktionlabs.medium.com/"
+      href="https://medium.com/convergencerfq"
       target="_blank"
       rel="noreferrer"
       css={(theme) => appBarMenuLinkStyle(theme)}
