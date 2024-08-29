@@ -133,7 +133,8 @@ const YieldProductsSection = styled((props: { className?: string }) => {
           width: 100%;
         `}
       >
-        {Array.from({ length: 5 }, (_, i) => {
+        {Array.from({ length: 1 }, (_, i) => {
+          // put length 5 to display all vaults
           const voltNumber = (i + 1) as VoltNumber;
           const cards = voltageDefAdjustedCards(
             vfac09.cards,

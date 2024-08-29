@@ -9,6 +9,7 @@ import { HeaderWallet } from "./HeaderWallet";
 import { AppBarButton } from "./AppBarButton";
 import MenuIcon from "@mui/icons-material/Menu";
 // import { FriktionTitle } from "./FriktionTitle";
+import { LDotFunTitle } from "./LDotFunTitle";
 // import { ColorModeToggleButton } from "./ColorModeToggleButton";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useRouteMatch } from "common/hooks/useRouteMatch";
@@ -116,8 +117,8 @@ export const AppBar = ({
     <AppBarContainer scroll={scrollPosition}>
       <HeaderLogo className="headerLogo">
         <Link to="/">
-          <LDotFun width="28" height="28" color={theme.palette.pink[600]} />
-          {/* <FriktionTitle height="18" /> */}
+          <LDotFun width="28" height="28" color={theme.palette.green[500]} />
+          <LDotFunTitle height="18" />
         </Link>
       </HeaderLogo>
       <AppBarItems

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 // import { breakpoints09 } from "./breakpoints09";
 // import { darken } from "@mui/material";
-import { FriktionBolt } from "features/icons";
+import { /*FriktionBolt,*/ LDotFun } from "features/icons";
 import {
   AlanGreenSpan,
   BlueSpan,
@@ -538,10 +538,10 @@ export const VoltsDropdown: React.FC<{
                 gap: 3px;
               `}
             >
-              <FriktionBolt
+              <LDotFun
                 width="15"
                 height="15"
-                color={theme.palette.pink[600]}
+                color={theme.palette.green[500]}
               />
               <LearnTitle>Learn</LearnTitle>
             </div>
@@ -772,14 +772,17 @@ export const pinkCTAStyles = (theme: any) => css`
   font-weight: 500;
   font-size: 14px;
   padding: 0 16px;
-  color: #ffffff;
+  color: #000;
   border-radius: 8px;
-  background: ${theme.palette.pink[700]} !important;
+  background: ${theme.palette.ldotfun.linear} !important;
   height: 40px;
   width: 100%;
   justify-content: space-between;
   &:focus {
     border-radius: 8px;
+  }
+  &:hover {
+    color: #000;
   }
 `;
 
