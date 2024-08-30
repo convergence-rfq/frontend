@@ -8,6 +8,7 @@ import { LandingPageHero } from "../components/LandingPageHero";
 import styled from "@emotion/styled";
 import { TopSectionBackground } from "../components/TopSectionBackground";
 import { MiddleSectionBackground } from "../components/MiddleSectionBackground";
+import { InfiniteTickerSlider } from "../components/InfiniteTickerSlider";
 // import { TheTeamSection } from "../components/the-team-section";
 // import { InvestorsSection } from "../components/InvestorsSection";
 
@@ -18,6 +19,7 @@ export const LandingPage = () => {
         <TopSectionBackground />
         <LandingPageHero />
         <StatisticsSection />
+        <InfiniteTickerSlider />
       </TopSection>
       <MiddleSection>
         <MiddleSectionBackground />
