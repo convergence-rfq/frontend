@@ -31,5 +31,7 @@
   "sort-imports.suppress-warnings": true,
   "search.exclude": {
     "**/node_modules*": true
-  }
+  },
+  "pieces.cloudCapabilities": "Blended",
+  "pieces.telemetry": true
 }

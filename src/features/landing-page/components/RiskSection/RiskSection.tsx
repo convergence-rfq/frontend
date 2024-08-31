@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import { SectionTitle } from "../SectionTitle";
 import { css } from "@emotion/react";
 import { RiskSectionText } from "./RiskSectionText";
-import { RiskChart } from "./RiskChart";
+// import { RiskChart } from "./RiskChart";
 import { LayoutContainer } from "common/components/LayoutContainer";
 
 interface RiskSectionProps {}
@@ -22,12 +22,12 @@ export const RiskSection: FunctionComponent<RiskSectionProps> = () => {
         </SectionTitle>
         <RiskSectionContentLayout>
           <RiskSectionText />
-          <RiskChart
+          {/* <RiskChart
             css={css`
               margin: auto;
               width: 100%;
             `}
-          />
+          /> */}
         </RiskSectionContentLayout>
       </RiskSectionContainer>
     </LayoutContainer>

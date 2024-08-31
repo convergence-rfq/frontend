@@ -1,9 +1,9 @@
-import { StatisticsSection } from "../components/StatisticsSection";
+// import { StatisticsSection } from "../components/StatisticsSection";
 import { GoalSection } from "../components/GoalSection";
 import { PortfolioSection } from "../components/PortfolioSection";
 import { RiskSection } from "../components/RiskSection";
 import { OurProductSection } from "../components/OurProductsSection";
-import { OurGrowthSection } from "../components/OurGrowthSection";
+// import { OurGrowthSection } from "../components/OurGrowthSection";
 import { LandingPageHero } from "../components/LandingPageHero";
 import styled from "@emotion/styled";
 import { TopSectionBackground } from "../components/TopSectionBackground";
@@ -18,7 +18,7 @@ export const LandingPage = () => {
       <TopSection>
         <TopSectionBackground />
         <LandingPageHero />
-        <StatisticsSection />
+        {/* <StatisticsSection /> */}
         <InfiniteTickerSlider />
       </TopSection>
       <MiddleSection>
@@ -29,7 +29,7 @@ export const LandingPage = () => {
         <OurProductSection />
       </MiddleSection>
       {/* <InvestorsSection /> */}
-      <OurGrowthSection />
+      {/* <OurGrowthSection /> */}
       {/* <TheTeamSection /> */}
     </>
   );
