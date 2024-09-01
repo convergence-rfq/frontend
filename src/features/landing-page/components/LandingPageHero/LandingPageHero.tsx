@@ -19,7 +19,7 @@ export const LandingPageHero = () => {
     >
       <LandingPageHeroLayout>
         <LandingPageText>
-          <AuditContainer
+          {/* <AuditContainer
             href="https://docs.friktion.fi/protocol/security"
             target="_blank"
             css={(theme) => css`
@@ -46,7 +46,7 @@ export const LandingPageHero = () => {
             >
               <img src={kudelskiLogo} alt="Kuldelski Logo" height="24px" />
             </KudelskiContainer>
-          </AuditContainer>
+          </AuditContainer> */}
           <Typography
             variant="h2"
             css={(theme) => css`
