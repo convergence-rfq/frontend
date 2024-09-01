@@ -28,7 +28,7 @@ const ANNOUNCEMENT = (
 // const ANNOUNCEMENT = null;
 
 export const AnnouncementBar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const location = useLocation();
 
   const hide =

@@ -140,7 +140,6 @@ export const ZeroNineLayout = React.memo<
           </clipPath>
         </svg>
       </div>
-
       <LayoutFooter
         links={footerLinks}
         isAnimationEnabled={checked}

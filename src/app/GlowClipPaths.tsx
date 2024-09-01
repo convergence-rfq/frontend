@@ -4,11 +4,11 @@ export const GlowClipPaths = () => (
   <>
     {/* Relatively sized vault path, width and height styles must be supplied to elements using this as clip */}
     <svg
-      width="1"
-      height="1"
-      viewBox="0 0 1 1"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      css={css`
+        position: absolute;
+        width: 0;
+        height: 0;
+      `}
     >
       <clipPath id="lDotFunPathRelative" clipPathUnits="objectBoundingBox">
         <path

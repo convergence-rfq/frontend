@@ -4,7 +4,7 @@ import { breakpoints } from "../09/breakpoints09";
 import { useState } from "react";
 import { css } from "@emotion/react";
 import { useToggleColorMode } from "./theme";
-import { AnnouncementBar } from "09/AnnouncementBar";
+// import { AnnouncementBar } from "09/AnnouncementBar";
 import { AppBar } from "features/app-bar";
 import { LayoutFooter } from "components/LayoutFooter";
 
@@ -114,7 +114,7 @@ export const BaseLayout = () => {
       `}
     >
       <BaseContainer className={!checked ? "animationsDisabled" : ""}>
-        <AnnouncementBar />
+        {/* <AnnouncementBar /> */}
         <AppBar hideColorModeToggle={false} />
         <Outlet />
       </BaseContainer>
