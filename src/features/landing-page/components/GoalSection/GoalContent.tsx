@@ -36,7 +36,7 @@ export const GoalContent = (props: GoalContentProps) => {
       </DescriptionText>
       <Link to={"/volts"}>
         <AppButton color={theme.palette.ldotfun.radial} variant="outlined">
-          Explore Volts
+          Explore Vaults
         </AppButton>
       </Link>
     </div>

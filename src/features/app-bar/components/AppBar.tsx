@@ -155,7 +155,7 @@ export const AppBar = ({
         >
           {isVoltTabCollapsed ? (
             <VoltsDropdownMobile>
-              <span className={"voltDropdown"}>Volts</span>
+              <span className={"voltDropdown"}>Vaults</span>
             </VoltsDropdownMobile>
           ) : (
             <Popover
@@ -203,7 +203,7 @@ export const AppBar = ({
                     font-weight: ${isTabOnVolts ? "600 !important" : "inherit"};
                   `}
                 >
-                  Volts
+                  Vaults
                 </span>
                 <KeyboardArrowDownIcon
                   css={css`
