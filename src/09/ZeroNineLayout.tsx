@@ -13,8 +13,8 @@ const footerLinks = [
   {
     title: "Features",
     items: [
-      { href: "https://friktion.fi/portfolio", label: "Portfolio" },
-      { href: "https://friktion.fi/analytics", label: "Analytics" },
+      { href: "https://leverage.fun/portfolio", label: "Portfolio" },
+      { href: "https://leverage.fun/analytics", label: "Analytics" },
     ],
   },
   {
@@ -49,18 +49,18 @@ const footerLinks = [
   {
     title: "Community",
     items: [
-      { href: "https://forum.friktion.fi", label: "Forum" },
-      { href: "https://friktionlabs.medium.com", label: "Blogs" },
+      { href: "https://forum.leverage.fun", label: "Forum" },
+      { href: "https://leveragefun.medium.com", label: "Blogs" },
     ],
   },
   {
     title: "Strategies",
     items: [
-      { href: "https://friktion.fi/income", label: "Covered Call" },
-      { href: "https://friktion.fi/stables", label: "Stables" },
-      { href: "https://friktion.fi/crab", label: "Crab" },
-      { href: "https://friktion.fi/basis", label: "Basis Yield" },
-      { href: "https://friktion.fi/protection", label: "Capital Protection" },
+      { href: "https://leverage.fun/income", label: "Covered Call" },
+      // { href: "https://friktion.fi/stables", label: "Stables" },
+      // { href: "https://friktion.fi/crab", label: "Crab" },
+      // { href: "https://friktion.fi/basis", label: "Basis Yield" },
+      // { href: "https://friktion.fi/protection", label: "Capital Protection" },
     ],
   },
 ];
