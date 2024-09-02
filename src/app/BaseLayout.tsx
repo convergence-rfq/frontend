@@ -88,10 +88,10 @@ const footerLinks = [
     title: "Strategies",
     items: [
       { href: "#", label: "Covered Call" },
-      { href: "#", label: "Stables" },
-      { href: "#", label: "Crab" },
-      { href: "#", label: "Basis Yield" },
-      { href: "#", label: "Capital Protection" },
+      // { href: "#", label: "Stables" },
+      // { href: "#", label: "Crab" },
+      // { href: "#", label: "Basis Yield" },
+      // { href: "#", label: "Capital Protection" },
     ],
   },
 ];
