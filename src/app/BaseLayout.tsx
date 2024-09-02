@@ -52,7 +52,7 @@ const footerLinks = [
       },
       {
         href: "#",
-        label: "What are Volts?",
+        label: "What are Vaults?",
       },
       {
         href: "#",

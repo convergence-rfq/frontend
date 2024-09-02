@@ -27,7 +27,7 @@ const footerLinks = [
       },
       {
         href: "https://docs.friktion.fi/products/what-are-volts",
-        label: "What are Volts?",
+        label: "What are Vaults?",
       },
       {
         href: "https://docs.friktion.fi/products/friktion-glossary",
