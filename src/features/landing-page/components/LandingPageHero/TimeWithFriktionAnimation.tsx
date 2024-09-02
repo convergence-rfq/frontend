@@ -13,7 +13,7 @@ export function TimeWithFriktionAnimation() {
     <AnimationContainer>
       <AnimationInnerOrbit />
       <AnimationOuterOrbit />
-      <AnimationChart />
+      {/* <AnimationChart /> */}
       <AnimationLogos />
     </AnimationContainer>
   );
