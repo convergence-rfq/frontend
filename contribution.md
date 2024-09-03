@@ -1,4 +1,4 @@
-# Contributing to Friktion projects
+# Contributing to leverage.fun projects
 
 Reading and following these guidelines will help us make the contribution process easy and effective for everyone involved. It also communicates that you agree to respect the time of the developers managing and developing these open source projects. In return, we will reciprocate that respect by addressing your issue, assessing changes, and helping you finalize your pull requests.
 
@@ -29,7 +29,7 @@ PRs to our libraries are always welcome and can be a quick way to get your fix o
 
 - Only fix/add the functionality in question **OR** address wide-spread whitespace/style issues, not both.
 - Address a single concern in the least number of changed lines as possible.
-- Include documentation in the repo or on our [docs site](https://docs.friktion.fi/).
+- Include documentation in the repo or on our [docs site](https://leverage.fun/).
 - Be accompanied by a complete Pull Request template (loaded automatically when a PR is created).
 
 For changes that address core functionality or would require breaking changes (e.g. a major release), it's best to open an Issue to discuss your proposal first. This is not required but can save time creating and reviewing changes.
@@ -43,7 +43,3 @@ In general, we follow the ["fork-and-pull" Git workflow](https://github.com/susa
 5. Following any formatting and testing guidelines specific to this repo
 6. Push changes to your fork
 7. Open a PR in our repository and follow the PR template so that we can efficiently review the changes.
-
-## Getting Help
-
-Join us in the [Friktion Discord](https://discord.com/invite/eSkK9X67Qj) and post your question in the [developers](https://discord.com/channels/891360797081632768/904575831844724736) channel.
