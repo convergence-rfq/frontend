@@ -5,7 +5,7 @@ import { useState } from "react";
 import { InvestmentStyle } from "./InvestmentStyle";
 import { css } from "@emotion/react";
 import { LayoutContainer } from "common/components/LayoutContainer";
-// import { PortfolioPieChart } from "./PortfolioPieChart";
+import { PortfolioPieChart } from "./PortfolioPieChart";
 
 export const PortfolioSection = () => {
   const [investmentStyle, setInvestmentStyle] =
@@ -30,7 +30,7 @@ export const PortfolioSection = () => {
               }
             `}
           />
-          {/* <PortfolioPieChart
+          <PortfolioPieChart
             css={(theme) => css`
               flex: 0 1 auto;
               width: 45%;
@@ -41,7 +41,7 @@ export const PortfolioSection = () => {
               }
             `}
             investmentStyle={investmentStyle}
-          /> */}
+          />
         </PortfolioSectionContent>
       </PortfolioSectionContainer>
     </LayoutContainer>
